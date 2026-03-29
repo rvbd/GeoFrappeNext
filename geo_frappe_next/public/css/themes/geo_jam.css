@@ -413,3 +413,29 @@
 	z-index: -1;
 	pointer-events: none;
 }
+
+[data-geo-theme="geo-jam"] body,
+[data-geo-theme="geo-jam"] .page-container,
+[data-geo-theme="geo-jam"] .layout-main,
+[data-geo-theme="geo-jam"] .page-wrapper {
+    background: transparent !important;
+}
+
+#geo-jam-starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;          /* bump up from -1 */
+    pointer-events: none;
+}
+
+/* Everything above the starfield needs z-index > 0 */
+[data-geo-theme="geo-jam"] .navbar,
+[data-geo-theme="geo-jam"] .layout-side-section,
+[data-geo-theme="geo-jam"] .layout-main-section,
+[data-geo-theme="geo-jam"] .page-head {
+    position: relative;
+    z-index: 1;
+}
