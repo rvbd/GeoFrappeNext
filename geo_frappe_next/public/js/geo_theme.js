@@ -215,9 +215,10 @@
 	// Boot — wait for Frappe desk to be ready, then load theme and inject UI
 	// -----------------------------------------------------------------------
 	function boot() {
-		// Apply immediately — frappe.boot is available synchronously at this point
-		loadTheme();
+		console.log("boot() called, frappe:", typeof frappe, "after_ajax:", typeof frappe !== "undefined" && typeof frappe.after_ajax);
 
+		loadTheme();
+		
 		if (typeof frappe !== "undefined" && frappe.after_ajax) {
 			frappe.after_ajax(function () {
 				injectThemePicker();
