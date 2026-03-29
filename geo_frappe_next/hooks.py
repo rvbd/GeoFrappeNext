@@ -33,6 +33,7 @@ app_include_css = [
     "/assets/geo_frappe_next/css/themes/geo_forest.css",
     "/assets/geo_frappe_next/css/themes/geo_jam.css",
     "/assets/geo_frappe_next/css/themes/geo_vista.css",
+    "/assets/geo_frappe_next/css/themes/geo_cyberpunk.css",
 ]
 
 boot_session = "geo_frappe_next.api.add_geo_theme_to_boot"
