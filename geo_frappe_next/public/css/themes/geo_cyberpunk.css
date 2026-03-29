@@ -22,6 +22,22 @@
 	--geo-border: #1e1e40;
 	--geo-border-subtle: #141430;
 	--geo-shadow-neon: 0 0 8px rgba(245, 230, 66, 0.3), 0 0 2px rgba(0, 212, 255, 0.2);
+
+	/* Override Frappe's own CSS variables */
+	--text-color: #e8e8f0;
+	--text-muted: #8888b0;
+	--heading-color: #f5e642;
+	--icon-fill: #8888b0;
+	--icon-stroke: #8888b0;
+	--bg-color: #05050f;
+	--card-bg: #0d0d1f;
+	--fg-color: #0d0d1f;
+	--border-color: #1e1e40;
+	--dark-border-color: #2a2a55;
+	--sidebar-bg-color: #080818;
+	--control-bg: #080818;
+	--disabled-text-color: #555588;
+	--placeholder-color: #555588;
 }
 
 /* --------------------------------------------------------------------------
@@ -84,8 +100,8 @@
 [data-geo-theme="geo-cyberpunk"] .navbar-home,
 [data-geo-theme="geo-cyberpunk"] header.navbar {
 	background-color: var(--geo-navbar-bg) !important;
-	border-bottom: 1px solid var(--geo-primary);
-	box-shadow: 0 0 12px rgba(245, 230, 66, 0.25), 0 0 3px rgba(0, 212, 255, 0.15);
+	border-bottom: 2px solid var(--geo-primary);
+	box-shadow: 0 0 20px rgba(245, 230, 66, 0.3), 0 0 5px rgba(0, 212, 255, 0.2), 0 2px 0 rgba(245, 230, 66, 0.1);
 }
 
 [data-geo-theme="geo-cyberpunk"] .navbar .nav-link,
@@ -121,8 +137,17 @@
 
 [data-geo-theme="geo-cyberpunk"] .sidebar-item:hover,
 [data-geo-theme="geo-cyberpunk"] .standard-sidebar-item:hover {
-	background-color: rgba(0, 212, 255, 0.05);
-	color: var(--geo-fg);
+	background-color: rgba(0, 212, 255, 0.08);
+	color: var(--geo-secondary) !important;
+	border-left: 2px solid var(--geo-secondary);
+}
+
+[data-geo-theme="geo-cyberpunk"] .standard-sidebar-item span,
+[data-geo-theme="geo-cyberpunk"] .standard-sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-cyberpunk"] .desk-sidebar .sidebar-item span,
+[data-geo-theme="geo-cyberpunk"] .desk-sidebar .sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-cyberpunk"] .sidebar-menu-item span {
+	color: var(--geo-fg) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -135,8 +160,14 @@
 [data-geo-theme="geo-cyberpunk"] .widget-group,
 [data-geo-theme="geo-cyberpunk"] .widget {
 	background-color: var(--geo-bg-subtle) !important;
-	border: 1px solid var(--geo-border) !important;
-	box-shadow: var(--geo-shadow-neon) !important;
+	border: 1px solid #2a2a55 !important;
+	border-left: 2px solid var(--geo-primary) !important;
+	box-shadow: 0 0 10px rgba(245, 230, 66, 0.15), inset 0 0 20px rgba(0, 0, 0, 0.3) !important;
+	border-radius: 2px !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .widget {
+	position: relative;
 }
 
 [data-geo-theme="geo-cyberpunk"] .layout-main,
@@ -371,14 +402,86 @@
 /* --------------------------------------------------------------------------
    Home page module links and shortcut text
    -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .workspace-shortcut,
 [data-geo-theme="geo-cyberpunk"] .shortcut-widget-box,
+[data-geo-theme="geo-cyberpunk"] .shortcut-widget-box .widget-title,
 [data-geo-theme="geo-cyberpunk"] .widget-body,
+[data-geo-theme="geo-cyberpunk"] .widget-body p,
+[data-geo-theme="geo-cyberpunk"] .widget-body span,
+[data-geo-theme="geo-cyberpunk"] .widget-head,
 [data-geo-theme="geo-cyberpunk"] .widget-head .widget-title,
+[data-geo-theme="geo-cyberpunk"] .widget-title,
 [data-geo-theme="geo-cyberpunk"] .module-links .btn-link,
 [data-geo-theme="geo-cyberpunk"] .module-links a,
 [data-geo-theme="geo-cyberpunk"] .shortcuts .btn-link,
 [data-geo-theme="geo-cyberpunk"] .shortcuts a,
 [data-geo-theme="geo-cyberpunk"] .onboarding-slide,
-[data-geo-theme="geo-cyberpunk"] .number-card-title {
+[data-geo-theme="geo-cyberpunk"] .number-card-title,
+[data-geo-theme="geo-cyberpunk"] .links-widget-list,
+[data-geo-theme="geo-cyberpunk"] .links-widget-list .document-link,
+[data-geo-theme="geo-cyberpunk"] .links-widget-list .document-link .document-link-badge,
+[data-geo-theme="geo-cyberpunk"] .links-widget-list a,
+[data-geo-theme="geo-cyberpunk"] .links-widget-list span,
+[data-geo-theme="geo-cyberpunk"] .widget-group .widget,
+[data-geo-theme="geo-cyberpunk"] .widget-group .widget *,
+[data-geo-theme="geo-cyberpunk"] .frappe-card *:not(.btn-primary):not(.btn-danger):not(.indicator-pill) {
 	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Widget / section titles — neon glow
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .widget-group-title,
+[data-geo-theme="geo-cyberpunk"] .widget-head .widget-title,
+[data-geo-theme="geo-cyberpunk"] .links-widget-list .link-item .link-label {
+	color: var(--geo-primary) !important;
+	text-shadow: 0 0 10px rgba(245, 230, 66, 0.7), 0 0 20px rgba(245, 230, 66, 0.3) !important;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Document link badges — neon yellow indicators
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .document-link-badge .count,
+[data-geo-theme="geo-cyberpunk"] .shortcut-widget-box .badge {
+	background-color: var(--geo-primary) !important;
+	color: #000000 !important;
+	font-weight: 700;
+	box-shadow: 0 0 6px rgba(245, 230, 66, 0.6) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Angular border-radius — cyberpunk uses hard edges
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .frappe-card,
+[data-geo-theme="geo-cyberpunk"] .widget,
+[data-geo-theme="geo-cyberpunk"] .btn,
+[data-geo-theme="geo-cyberpunk"] .btn-primary,
+[data-geo-theme="geo-cyberpunk"] .btn-default,
+[data-geo-theme="geo-cyberpunk"] .form-control,
+[data-geo-theme="geo-cyberpunk"] .modal-content,
+[data-geo-theme="geo-cyberpunk"] .dropdown-menu {
+	border-radius: 2px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scan-line effect on widgets (subtle cyberpunk CRT feel)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .widget::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(0, 212, 255, 0.01) 2px,
+		rgba(0, 212, 255, 0.01) 4px
+	);
+	pointer-events: none;
+	border-radius: 2px;
 }
