@@ -206,11 +206,14 @@
 	// Boot — wait for Frappe desk to be ready, then load theme and inject UI
 	// -----------------------------------------------------------------------
 	function boot() {
-		loadTheme();
+		// Apply from localStorage immediately for fast paint (avoids flash of unstyled content)
+		var stored = localStorage.getItem(STORAGE_KEY);
+		if (stored) applyTheme(stored);
 
 		// Inject picker once the Frappe UI is fully rendered
 		if (typeof frappe !== "undefined" && frappe.after_ajax) {
 			frappe.after_ajax(function () {
+				loadTheme(); // reload from server once Frappe session is ready
 				injectThemePicker();
 			});
 		}
