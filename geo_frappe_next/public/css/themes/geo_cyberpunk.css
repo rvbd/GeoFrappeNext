@@ -609,3 +609,27 @@
 	/* fade out */
 	95% { opacity: 0; }
 }
+
+/* --------------------------------------------------------------------------
+   Indicator Pills — force dark text so pastels are legible on deep bg
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .indicator-pill,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.green,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.red,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.pink,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.orange,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.yellow,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.blue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.purple,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.cyan,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.gray,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.grey,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.light-blue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.darkgrey,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.dark,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.white,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.black,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.lblue {
+	color: #0d0d20 !important;
+	font-weight: 600;
+}
