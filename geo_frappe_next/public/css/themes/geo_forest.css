@@ -8,18 +8,18 @@
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-forest"] {
 	--geo-bg: #0d1f0d;
-	--geo-bg-subtle: #1a2e1a;
+	--geo-bg-subtle: #1e331e;
 	--geo-navbar-bg: #1f3d1f;
 	--geo-sidebar-bg: #152515;
-	--geo-fg: #d4e8c2;
-	--geo-fg-muted: #8aaf72;
+	--geo-fg: #e0f0cc;
+	--geo-fg-muted: #a8cc88;
 	--geo-primary: #4caf50;
 	--geo-primary-fg: #000000;
 	--geo-accent: #4caf50;
 	--geo-secondary: #8d6e63;
 	--geo-accent-visited: #a5d6a7;
 	--geo-danger: #e53935;
-	--geo-border: #2d5a2d;
+	--geo-border: #3a6e3a;
 	--geo-border-subtle: #1e3a1e;
 	--geo-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -200,7 +200,7 @@
 }
 
 [data-geo-theme="geo-forest"] ::placeholder {
-	color: #3a5a3a !important;
+	color: #5a8a5a !important;
 	opacity: 1;
 }
 
@@ -358,4 +358,19 @@
 [data-geo-theme="geo-forest"] .help-box,
 [data-geo-theme="geo-forest"] .form-group .help-box {
 	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Home page module links and shortcut text
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .shortcut-widget-box,
+[data-geo-theme="geo-forest"] .widget-body,
+[data-geo-theme="geo-forest"] .widget-head .widget-title,
+[data-geo-theme="geo-forest"] .module-links .btn-link,
+[data-geo-theme="geo-forest"] .module-links a,
+[data-geo-theme="geo-forest"] .shortcuts .btn-link,
+[data-geo-theme="geo-forest"] .shortcuts a,
+[data-geo-theme="geo-forest"] .onboarding-slide,
+[data-geo-theme="geo-forest"] .number-card-title {
+	color: var(--geo-fg) !important;
 }
