@@ -7,22 +7,62 @@
    CSS Custom Properties
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] {
-	--geo-bg: #063a6e;
-	--geo-bg-subtle: rgba(255, 255, 255, 0.1);
-	--geo-navbar-bg: linear-gradient(180deg, #1a6fc4 0%, #0d47a1 100%);
-	--geo-sidebar-bg: rgba(255, 255, 255, 0.08);
-	--geo-fg: #ffffff;
-	--geo-fg-muted: #c8dff8;
-	--geo-primary: #00b4ff;
-	--geo-primary-fg: #ffffff;
-	--geo-accent: #00b4ff;
-	--geo-secondary: #ffffff;
-	--geo-accent-visited: #b0d4ff;
-	--geo-danger: #ff4444;
-	--geo-border: rgba(255, 255, 255, 0.3);
-	--geo-border-subtle: rgba(255, 255, 255, 0.15);
-	--geo-shadow-glass: 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-	--geo-backdrop: blur(10px);
+--geo-bg: #02233a; /* Vista Aero deep navy desktop background */
+--geo-bg-subtle: rgba(10, 50, 90, 0.85);
+--geo-navbar-bg: linear-gradient(180deg, #2070c8 0%, #0a3d82 50%, #082e6a 100%);
+--geo-sidebar-bg: rgba(5, 30, 65, 0.9);
+--geo-fg: #ffffff;
+--geo-fg-muted: #a8c8f0;
+--geo-primary: #3daeff;
+--geo-primary-fg: #ffffff;
+--geo-accent: #3daeff;
+--geo-secondary: #ffffff;
+--geo-accent-visited: #b0d4ff;
+--geo-danger: #ff4444;
+--geo-border: rgba(100, 180, 255, 0.4);
+--geo-border-subtle: rgba(60, 140, 220, 0.25);
+--geo-shadow-glass: 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+--geo-backdrop: blur(10px);
+}
+
+/* --------------------------------------------------------------------------
+   Vista Aero Orb Glow — decorative radial gradients
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] body::before {
+content: '';
+position: fixed;
+top: -200px;
+left: -200px;
+width: 600px;
+height: 600px;
+background: radial-gradient(circle, rgba(30, 120, 220, 0.35) 0%, rgba(10, 60, 160, 0.15) 50%, transparent 70%);
+pointer-events: none;
+z-index: 0;
+border-radius: 50%;
+}
+
+[data-geo-theme="geo-vista"] body::after {
+content: '';
+position: fixed;
+bottom: -150px;
+right: -150px;
+width: 500px;
+height: 500px;
+background: radial-gradient(circle, rgba(0, 100, 200, 0.2) 0%, transparent 70%);
+pointer-events: none;
+z-index: 0;
+border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------------
+   Z-index layering — ensure UI sits above orb effects
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] .navbar,
+[data-geo-theme="geo-vista"] .layout-side-section,
+[data-geo-theme="geo-vista"] .layout-main-section,
+[data-geo-theme="geo-vista"] .page-head {
+position: relative;
+z-index: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -38,9 +78,9 @@
 [data-geo-theme="geo-vista"] .frappe-control,
 [data-geo-theme="geo-vista"] .form-control,
 [data-geo-theme="geo-vista"] .like-disabled-input {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-	background-color: var(--geo-bg);
-	color: var(--geo-fg);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+background-color: var(--geo-bg);
+color: var(--geo-fg);
 }
 
 /* --------------------------------------------------------------------------
@@ -54,9 +94,9 @@
 [data-geo-theme="geo-vista"] .list-row-head,
 [data-geo-theme="geo-vista"] .page-title,
 [data-geo-theme="geo-vista"] .modal-title {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-	color: var(--geo-fg);
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+color: var(--geo-fg);
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* --------------------------------------------------------------------------
@@ -64,18 +104,18 @@
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] a,
 [data-geo-theme="geo-vista"] a:link {
-	color: var(--geo-accent);
-	text-decoration: none;
-	cursor: pointer;
+color: var(--geo-accent);
+text-decoration: none;
+cursor: pointer;
 }
 
 [data-geo-theme="geo-vista"] a:visited {
-	color: var(--geo-accent-visited);
+color: var(--geo-accent-visited);
 }
 
 [data-geo-theme="geo-vista"] a:hover {
-	color: #40ccff;
-	text-decoration: underline;
+color: #40ccff;
+text-decoration: underline;
 }
 
 /* --------------------------------------------------------------------------
@@ -84,52 +124,52 @@
 [data-geo-theme="geo-vista"] .navbar,
 [data-geo-theme="geo-vista"] .navbar-home,
 [data-geo-theme="geo-vista"] header.navbar {
-	background: linear-gradient(180deg, #1a6fc4 0%, #0d47a1 100%) !important;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-	box-shadow: var(--geo-shadow-glass);
+background: linear-gradient(180deg, #2070c8 0%, #0a3d82 50%, #082e6a 100%) !important;
+border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+box-shadow: var(--geo-shadow-glass);
 }
 
 [data-geo-theme="geo-vista"] .navbar .nav-link,
 [data-geo-theme="geo-vista"] .navbar a {
-	color: var(--geo-fg) !important;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+color: var(--geo-fg) !important;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 [data-geo-theme="geo-vista"] .navbar .nav-link:hover,
 [data-geo-theme="geo-vista"] .navbar a:hover {
-	color: var(--geo-accent) !important;
+color: var(--geo-accent) !important;
 }
 
 /* --------------------------------------------------------------------------
-   Sidebar — glass panel
+   Sidebar — dark glass panel
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .layout-side-section,
 [data-geo-theme="geo-vista"] .desk-sidebar,
 [data-geo-theme="geo-vista"] .sidebar-column,
 [data-geo-theme="geo-vista"] .standard-sidebar {
-	background-color: rgba(255, 255, 255, 0.08) !important;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border-right: 1px solid var(--geo-border-subtle);
+background-color: rgba(5, 30, 65, 0.9) !important;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-right: 1px solid var(--geo-border-subtle);
 }
 
 [data-geo-theme="geo-vista"] .sidebar-item.selected,
 [data-geo-theme="geo-vista"] .standard-sidebar-item.selected,
 [data-geo-theme="geo-vista"] .desk-sidebar .sidebar-item.active,
 [data-geo-theme="geo-vista"] .sidebar-menu-item.active {
-	border-left: 3px solid var(--geo-accent) !important;
-	background-color: rgba(0, 180, 255, 0.2) !important;
-	color: var(--geo-fg) !important;
+border-left: 3px solid var(--geo-accent) !important;
+background-color: rgba(61, 174, 255, 0.2) !important;
+color: var(--geo-fg) !important;
 }
 
 [data-geo-theme="geo-vista"] .sidebar-item:hover,
 [data-geo-theme="geo-vista"] .standard-sidebar-item:hover {
-	background-color: rgba(255, 255, 255, 0.12);
-	color: var(--geo-fg);
+background-color: rgba(61, 174, 255, 0.12);
+color: var(--geo-fg);
 }
 
 /* --------------------------------------------------------------------------
-   Cards and main content panels — glass effect
+   Cards and main content panels — dark glass effect
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .frappe-card,
 [data-geo-theme="geo-vista"] .form-page,
@@ -137,53 +177,63 @@
 [data-geo-theme="geo-vista"] .section-body,
 [data-geo-theme="geo-vista"] .widget-group,
 [data-geo-theme="geo-vista"] .widget {
-	background-color: rgba(255, 255, 255, 0.1) !important;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3) !important;
-	box-shadow: var(--geo-shadow-glass) !important;
+background-color: rgba(5, 30, 70, 0.85) !important;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid var(--geo-border) !important;
+box-shadow: var(--geo-shadow-glass) !important;
 }
 
 [data-geo-theme="geo-vista"] .layout-main,
 [data-geo-theme="geo-vista"] .page-wrapper,
 [data-geo-theme="geo-vista"] .page-container {
-	background-color: var(--geo-bg) !important;
+background-color: var(--geo-bg) !important;
 }
 
 /* --------------------------------------------------------------------------
-   Buttons — Vista gradient style
+   Page head / content area
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] .page-head,
+[data-geo-theme="geo-vista"] .page-head-content {
+background: linear-gradient(180deg, rgba(20, 80, 160, 0.6) 0%, rgba(5, 30, 80, 0.4) 100%) !important;
+border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — proper Vista glass button
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .btn-primary,
 [data-geo-theme="geo-vista"] button.btn-primary {
-	background: linear-gradient(180deg, #4da6ff 0%, #0066cc 50%, #0050a0 51%, #003d80 100%) !important;
-	color: var(--geo-primary-fg) !important;
-	border: 1px solid rgba(255, 255, 255, 0.3) !important;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+background: linear-gradient(180deg, rgba(100, 180, 255, 0.5) 0%, rgba(30, 100, 220, 0.8) 49%, rgba(10, 60, 180, 0.9) 51%, rgba(5, 40, 140, 0.95) 100%) !important;
+color: var(--geo-primary-fg) !important;
+border: 1px solid rgba(150, 200, 255, 0.6) !important;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.2) !important;
+border-radius: 4px;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 [data-geo-theme="geo-vista"] .btn-primary:hover {
-	background: linear-gradient(180deg, #70baff 0%, #0080e0 50%, #0066b8 51%, #004d99 100%) !important;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+background: linear-gradient(180deg, rgba(130, 200, 255, 0.6) 0%, rgba(50, 130, 240, 0.9) 49%, rgba(20, 80, 200, 0.95) 51%, rgba(10, 55, 160, 1) 100%) !important;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
 }
 
 [data-geo-theme="geo-vista"] .btn-secondary,
 [data-geo-theme="geo-vista"] button.btn-default,
 [data-geo-theme="geo-vista"] .btn-default {
-	background: rgba(255, 255, 255, 0.15) !important;
-	color: var(--geo-fg) !important;
-	border: 1px solid var(--geo-border) !important;
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
+background: rgba(10, 40, 90, 0.7) !important;
+color: var(--geo-fg) !important;
+border: 1px solid var(--geo-border) !important;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
 }
 
 [data-geo-theme="geo-vista"] .btn-danger {
-	background-color: var(--geo-danger) !important;
-	border-color: var(--geo-danger) !important;
+background-color: var(--geo-danger) !important;
+border-color: var(--geo-danger) !important;
 }
 
 /* --------------------------------------------------------------------------
-   Input Fields — glass inputs
+   Input Fields — dark navy inputs
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] input[type="text"],
 [data-geo-theme="geo-vista"] input[type="email"],
@@ -196,25 +246,25 @@
 [data-geo-theme="geo-vista"] select,
 [data-geo-theme="geo-vista"] .form-control,
 [data-geo-theme="geo-vista"] .frappe-control .form-control {
-	background-color: rgba(255, 255, 255, 0.12) !important;
-	color: var(--geo-fg) !important;
-	border: 1px solid var(--geo-border) !important;
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
+background-color: rgba(5, 25, 60, 0.9) !important;
+color: var(--geo-fg) !important;
+border: 1px solid var(--geo-border) !important;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
 }
 
 [data-geo-theme="geo-vista"] input:focus,
 [data-geo-theme="geo-vista"] textarea:focus,
 [data-geo-theme="geo-vista"] select:focus,
 [data-geo-theme="geo-vista"] .form-control:focus {
-	border-color: var(--geo-accent) !important;
-	box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.3) !important;
-	outline: none;
+border-color: var(--geo-accent) !important;
+box-shadow: 0 0 0 3px rgba(61, 174, 255, 0.3) !important;
+outline: none;
 }
 
 [data-geo-theme="geo-vista"] ::placeholder {
-	color: rgba(200, 223, 248, 0.6) !important;
-	opacity: 1;
+color: rgba(168, 200, 240, 0.6) !important;
+opacity: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -222,7 +272,7 @@
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .indicator-pill,
 [data-geo-theme="geo-vista"] .badge {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -230,69 +280,67 @@
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .list-row-container,
 [data-geo-theme="geo-vista"] .list-row {
-	background-color: rgba(255, 255, 255, 0.06) !important;
-	border-bottom: 1px solid var(--geo-border-subtle) !important;
+background-color: rgba(5, 25, 60, 0.6) !important;
+border-bottom: 1px solid var(--geo-border-subtle) !important;
 }
 
 [data-geo-theme="geo-vista"] .list-row-container:hover,
 [data-geo-theme="geo-vista"] .list-row:hover {
-	background-color: rgba(255, 255, 255, 0.12) !important;
+background-color: rgba(10, 45, 100, 0.8) !important;
 }
 
 [data-geo-theme="geo-vista"] .list-row-head {
-	background: linear-gradient(180deg, #1a6fc4 0%, #0d47a1 100%) !important;
-	border-bottom: 1px solid var(--geo-border) !important;
+background: linear-gradient(180deg, #2070c8 0%, #0a3d82 100%) !important;
+border-bottom: 1px solid var(--geo-border) !important;
 }
 
 /* --------------------------------------------------------------------------
-   Modals — glass panels
+   Modals — dark glass panels
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .modal-content,
 [data-geo-theme="geo-vista"] .modal-dialog .modal-content {
-	background-color: rgba(6, 58, 110, 0.85) !important;
-	backdrop-filter: blur(16px);
-	-webkit-backdrop-filter: blur(16px);
-	border: 1px solid var(--geo-border) !important;
-	box-shadow: var(--geo-shadow-glass) !important;
+background-color: rgba(2, 20, 55, 0.95) !important;
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid var(--geo-border) !important;
+box-shadow: var(--geo-shadow-glass) !important;
 }
 
 [data-geo-theme="geo-vista"] .modal-header {
-	background: linear-gradient(180deg, #1a6fc4 0%, #0d47a1 100%) !important;
-	border-bottom: 1px solid var(--geo-border) !important;
+background: linear-gradient(180deg, #2070c8 0%, #0a3d82 100%) !important;
+border-bottom: 1px solid var(--geo-border) !important;
 }
 
 [data-geo-theme="geo-vista"] .modal-header .modal-title {
-	color: var(--geo-fg) !important;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+color: var(--geo-fg) !important;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 [data-geo-theme="geo-vista"] .modal-footer {
-	background-color: rgba(255, 255, 255, 0.05) !important;
-	border-top: 1px solid var(--geo-border) !important;
+background-color: rgba(2, 15, 45, 0.8) !important;
+border-top: 1px solid var(--geo-border) !important;
 }
 
 /* --------------------------------------------------------------------------
-   Dropdowns / Menus
+   Dropdowns / Menus — nearly opaque dark navy, no white flash
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .dropdown-menu,
 [data-geo-theme="geo-vista"] .autocomplete-results {
-	background-color: rgba(6, 40, 90, 0.9) !important;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid var(--geo-border) !important;
-	box-shadow: var(--geo-shadow-glass) !important;
+background-color: rgba(2, 20, 50, 0.97) !important; /* nearly-opaque dark navy — prevents white flash on blur */
+border: 1px solid var(--geo-border) !important;
+box-shadow: var(--geo-shadow-glass) !important;
 }
 
 [data-geo-theme="geo-vista"] .dropdown-item,
 [data-geo-theme="geo-vista"] .autocomplete-item {
-	color: var(--geo-fg) !important;
+color: var(--geo-fg) !important;
 }
 
 [data-geo-theme="geo-vista"] .dropdown-item:hover,
 [data-geo-theme="geo-vista"] .autocomplete-item:hover,
 [data-geo-theme="geo-vista"] .dropdown-item:focus {
-	background-color: rgba(0, 180, 255, 0.2) !important;
-	color: var(--geo-fg) !important;
+background-color: rgba(61, 174, 255, 0.2) !important;
+color: var(--geo-fg) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -304,37 +352,37 @@
 [data-geo-theme="geo-vista"] table,
 [data-geo-theme="geo-vista"] th,
 [data-geo-theme="geo-vista"] td {
-	background-color: rgba(255, 255, 255, 0.06) !important;
-	color: var(--geo-fg) !important;
-	border-color: var(--geo-border-subtle) !important;
+background-color: rgba(5, 20, 55, 0.8) !important;
+color: var(--geo-fg) !important;
+border-color: var(--geo-border-subtle) !important;
 }
 
 [data-geo-theme="geo-vista"] .dt-header .dt-cell {
-	background: linear-gradient(180deg, #1a6fc4 0%, #0d47a1 100%) !important;
-	color: var(--geo-fg) !important;
+background: linear-gradient(180deg, #2070c8 0%, #0a3d82 100%) !important;
+color: var(--geo-fg) !important;
 }
 
 /* --------------------------------------------------------------------------
    Scrollbar — glassy, Vista cyan thumb
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] ::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
+width: 8px;
+height: 8px;
 }
 
 [data-geo-theme="geo-vista"] ::-webkit-scrollbar-track {
-	background: rgba(0, 0, 0, 0.2);
+background: rgba(0, 0, 0, 0.2);
 }
 
 [data-geo-theme="geo-vista"] ::-webkit-scrollbar-thumb {
-	background: rgba(0, 180, 255, 0.5);
-	border-radius: 4px;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+background: rgba(61, 174, 255, 0.5);
+border-radius: 4px;
+border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 [data-geo-theme="geo-vista"] ::-webkit-scrollbar-thumb:hover {
-	background: var(--geo-accent);
-	box-shadow: 0 0 4px rgba(0, 180, 255, 0.6);
+background: var(--geo-accent);
+box-shadow: 0 0 4px rgba(61, 174, 255, 0.6);
 }
 
 /* --------------------------------------------------------------------------
@@ -342,13 +390,13 @@
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-vista"] .title-text,
 [data-geo-theme="geo-vista"] .page-title .title-text {
-	color: var(--geo-fg) !important;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+color: var(--geo-fg) !important;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 [data-geo-theme="geo-vista"] .breadcrumb-item,
 [data-geo-theme="geo-vista"] .breadcrumb a {
-	color: var(--geo-fg-muted) !important;
+color: var(--geo-fg-muted) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -357,28 +405,22 @@
 [data-geo-theme="geo-vista"] .notifications-list,
 [data-geo-theme="geo-vista"] .alert,
 [data-geo-theme="geo-vista"] .toast {
-	background-color: rgba(255, 255, 255, 0.1) !important;
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	border: 1px solid var(--geo-border) !important;
-	color: var(--geo-fg) !important;
+background-color: rgba(5, 25, 65, 0.9) !important;
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border: 1px solid var(--geo-border) !important;
+color: var(--geo-fg) !important;
 }
 
 /* --------------------------------------------------------------------------
-   Misc — Vista blue desktop feel
+   Misc
    -------------------------------------------------------------------------- */
-[data-geo-theme="geo-vista"] .page-head,
-[data-geo-theme="geo-vista"] .page-head-content {
-	background-color: rgba(255, 255, 255, 0.05) !important;
-	border-bottom: 1px solid var(--geo-border-subtle) !important;
-}
-
 [data-geo-theme="geo-vista"] .widget-control,
 [data-geo-theme="geo-vista"] .widget-title {
-	color: var(--geo-fg) !important;
+color: var(--geo-fg) !important;
 }
 
 [data-geo-theme="geo-vista"] .help-box,
 [data-geo-theme="geo-vista"] .form-group .help-box {
-	color: var(--geo-fg-muted) !important;
+color: var(--geo-fg-muted) !important;
 }
