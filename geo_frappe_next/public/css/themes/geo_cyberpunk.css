@@ -406,6 +406,7 @@
    Home page module links and shortcut text
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-cyberpunk"] .workspace-shortcut,
+[data-geo-theme="geo-cyberpunk"] .workspace-shortcut-item,
 [data-geo-theme="geo-cyberpunk"] .shortcut-widget-box,
 [data-geo-theme="geo-cyberpunk"] .shortcut-widget-box .widget-title,
 [data-geo-theme="geo-cyberpunk"] .widget-body,
@@ -414,6 +415,7 @@
 [data-geo-theme="geo-cyberpunk"] .widget-head,
 [data-geo-theme="geo-cyberpunk"] .widget-head .widget-title,
 [data-geo-theme="geo-cyberpunk"] .widget-title,
+[data-geo-theme="geo-cyberpunk"] .workspace-section-title,
 [data-geo-theme="geo-cyberpunk"] .module-links .btn-link,
 [data-geo-theme="geo-cyberpunk"] .module-links a,
 [data-geo-theme="geo-cyberpunk"] .shortcuts .btn-link,
@@ -429,6 +431,18 @@
 [data-geo-theme="geo-cyberpunk"] .widget-group .widget *,
 [data-geo-theme="geo-cyberpunk"] .frappe-card *:not(.btn-primary):not(.btn-danger):not(.indicator-pill) {
 	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .link-item,
+[data-geo-theme="geo-cyberpunk"] .link-item a,
+[data-geo-theme="geo-cyberpunk"] .link-item .link-content,
+[data-geo-theme="geo-cyberpunk"] .links-widget-list .link-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .link-item:hover,
+[data-geo-theme="geo-cyberpunk"] .link-item a:hover {
+	color: var(--geo-primary) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -452,6 +466,16 @@
 	color: #000000 !important;
 	font-weight: 700;
 	box-shadow: 0 0 6px rgba(245, 230, 66, 0.6) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Shortcut count badges
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .shortcut-widget-box .count,
+[data-geo-theme="geo-cyberpunk"] .workspace-shortcut-item .count {
+	color: var(--geo-fg) !important;
+	background-color: var(--geo-bg) !important;
+	border: 1px solid var(--geo-border) !important;
 }
 
 /* --------------------------------------------------------------------------
