@@ -21,7 +21,10 @@
 	--geo-danger: #ff3c00;
 	--geo-border: #1e1e40;
 	--geo-border-subtle: #141430;
-	--geo-shadow-neon: 0 0 8px rgba(245, 230, 66, 0.3), 0 0 2px rgba(0, 212, 255, 0.2);
+	--geo-red: #e8003a;           /* vivid Cyberpunk danger-red / label color */
+	--geo-red-dim: #5c0018;       /* deep blood-red for bg tints */
+	--geo-red-glow: 0 0 8px rgba(232, 0, 58, 0.5), 0 0 2px rgba(232, 0, 58, 0.3);
+	--geo-shadow-neon: 0 0 8px rgba(245, 230, 66, 0.25), 0 0 4px rgba(0, 212, 255, 0.15), 0 0 2px rgba(232, 0, 58, 0.15);
 
 	/* Override Frappe's own CSS variables */
 	--text-color: #e8e8f0;
@@ -121,8 +124,8 @@
 [data-geo-theme="geo-cyberpunk"] .desk-sidebar,
 [data-geo-theme="geo-cyberpunk"] .sidebar-column,
 [data-geo-theme="geo-cyberpunk"] .standard-sidebar {
-	background-color: var(--geo-sidebar-bg) !important;
-	border-right: 1px solid var(--geo-border);
+	background: linear-gradient(180deg, #080818 0%, #0f0508 100%) !important;
+	border-right: 1px solid var(--geo-red-dim);
 }
 
 [data-geo-theme="geo-cyberpunk"] .sidebar-item.selected,
@@ -385,7 +388,7 @@
 [data-geo-theme="geo-cyberpunk"] .page-head,
 [data-geo-theme="geo-cyberpunk"] .page-head-content {
 	background-color: var(--geo-bg) !important;
-	border-bottom: 1px solid var(--geo-border-subtle) !important;
+	border-bottom: 1px solid var(--geo-red-dim) !important;
 }
 
 [data-geo-theme="geo-cyberpunk"] .widget-control,
@@ -484,4 +487,101 @@
 	);
 	pointer-events: none;
 	border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Form field labels — vivid red, uppercase, tracked (Cyberpunk 2077 style)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .control-label,
+[data-geo-theme="geo-cyberpunk"] .frappe-control .control-label,
+[data-geo-theme="geo-cyberpunk"] label.control-label {
+	color: var(--geo-red) !important;
+	font-size: 0.75rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Section dividers / horizontal rules — red accent
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .section-head,
+[data-geo-theme="geo-cyberpunk"] .form-section .section-head {
+	border-bottom: 1px solid var(--geo-red-dim) !important;
+	color: var(--geo-red) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] hr {
+	border-color: var(--geo-red-dim) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Glitch & Grain overlay — atmospheric screen effect
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: 9000;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+	background-size: 180px 180px;
+	opacity: 0.035;
+	animation: geo-cp-grain 0.12s steps(1) infinite;
+	mix-blend-mode: overlay;
+}
+
+@keyframes geo-cp-grain {
+	0%   { background-position:   0%   0%; }
+	10%  { background-position:  -5%  -8%; }
+	20%  { background-position:   8%   4%; }
+	30%  { background-position:  -3%  12%; }
+	40%  { background-position:  10%  -5%; }
+	50%  { background-position:  -7%   7%; }
+	60%  { background-position:   4%  -9%; }
+	70%  { background-position:  -9%   3%; }
+	80%  { background-position:   6%  10%; }
+	90%  { background-position:  -4%  -4%; }
+	100% { background-position:   0%   0%; }
+}
+
+[data-geo-theme="geo-cyberpunk"] body::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: 9001;
+	pointer-events: none;
+	opacity: 0;
+	animation: geo-cp-glitch 10s linear infinite;
+}
+
+@keyframes geo-cp-glitch {
+	/* idle most of the time */
+	0%,  88%, 100% {
+		opacity: 0;
+		transform: none;
+		background: transparent;
+	}
+	/* cyan slice */
+	89% {
+		opacity: 1;
+		transform: translateY(-2px) skewX(-0.8deg);
+		clip-path: inset(28% 0 62% 0);
+		background: linear-gradient(transparent 0%, rgba(0, 212, 255, 0.07) 50%, transparent 100%);
+	}
+	/* red slice */
+	91% {
+		opacity: 1;
+		transform: translateY(3px) skewX(1.2deg);
+		clip-path: inset(55% 0 25% 0);
+		background: linear-gradient(transparent 0%, rgba(232, 0, 58, 0.08) 50%, transparent 100%);
+	}
+	/* yellow flash */
+	93% {
+		opacity: 1;
+		transform: translateX(-1px);
+		clip-path: inset(10% 0 80% 0);
+		background: linear-gradient(transparent 0%, rgba(245, 230, 66, 0.05) 50%, transparent 100%);
+	}
+	/* fade out */
+	95% { opacity: 0; }
 }
