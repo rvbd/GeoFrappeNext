@@ -1,0 +1,384 @@
+/* ==========================================================================
+   Geo Cyberpunk 2077 Theme — Neon Yellow, Electric Cyan, Dark Night City
+   Scoped under [data-geo-theme="geo-cyberpunk"]
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] {
+	--geo-bg: #05050f;
+	--geo-bg-subtle: #0d0d1f;
+	--geo-navbar-bg: #0a0a20;
+	--geo-sidebar-bg: #080818;
+	--geo-fg: #e8e8f0;
+	--geo-fg-muted: #8888b0;
+	--geo-primary: #f5e642;
+	--geo-primary-fg: #000000;
+	--geo-accent: #f5e642;
+	--geo-secondary: #00d4ff;
+	--geo-accent-visited: #cc44ff;
+	--geo-danger: #ff3c00;
+	--geo-border: #1e1e40;
+	--geo-border-subtle: #141430;
+	--geo-shadow-neon: 0 0 8px rgba(245, 230, 66, 0.3), 0 0 2px rgba(0, 212, 255, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Base / Typography
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"],
+[data-geo-theme="geo-cyberpunk"] body,
+[data-geo-theme="geo-cyberpunk"] input,
+[data-geo-theme="geo-cyberpunk"] textarea,
+[data-geo-theme="geo-cyberpunk"] select,
+[data-geo-theme="geo-cyberpunk"] button,
+[data-geo-theme="geo-cyberpunk"] label,
+[data-geo-theme="geo-cyberpunk"] .frappe-control,
+[data-geo-theme="geo-cyberpunk"] .form-control,
+[data-geo-theme="geo-cyberpunk"] .like-disabled-input {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+	background-color: var(--geo-bg);
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] h1,
+[data-geo-theme="geo-cyberpunk"] h2,
+[data-geo-theme="geo-cyberpunk"] h3,
+[data-geo-theme="geo-cyberpunk"] h4,
+[data-geo-theme="geo-cyberpunk"] .form-section-title,
+[data-geo-theme="geo-cyberpunk"] .list-row-head,
+[data-geo-theme="geo-cyberpunk"] .page-title,
+[data-geo-theme="geo-cyberpunk"] .modal-title {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+	color: var(--geo-primary);
+	text-shadow: 0 0 8px rgba(245, 230, 66, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] a,
+[data-geo-theme="geo-cyberpunk"] a:link {
+	color: var(--geo-accent);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+[data-geo-theme="geo-cyberpunk"] a:visited {
+	color: var(--geo-accent-visited);
+}
+
+[data-geo-theme="geo-cyberpunk"] a:hover {
+	color: var(--geo-secondary);
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .navbar,
+[data-geo-theme="geo-cyberpunk"] .navbar-home,
+[data-geo-theme="geo-cyberpunk"] header.navbar {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-primary);
+	box-shadow: 0 0 12px rgba(245, 230, 66, 0.25), 0 0 3px rgba(0, 212, 255, 0.15);
+}
+
+[data-geo-theme="geo-cyberpunk"] .navbar .nav-link,
+[data-geo-theme="geo-cyberpunk"] .navbar a {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .navbar .nav-link:hover,
+[data-geo-theme="geo-cyberpunk"] .navbar a:hover {
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .layout-side-section,
+[data-geo-theme="geo-cyberpunk"] .desk-sidebar,
+[data-geo-theme="geo-cyberpunk"] .sidebar-column,
+[data-geo-theme="geo-cyberpunk"] .standard-sidebar {
+	background-color: var(--geo-sidebar-bg) !important;
+	border-right: 1px solid var(--geo-border);
+}
+
+[data-geo-theme="geo-cyberpunk"] .sidebar-item.selected,
+[data-geo-theme="geo-cyberpunk"] .standard-sidebar-item.selected,
+[data-geo-theme="geo-cyberpunk"] .desk-sidebar .sidebar-item.active,
+[data-geo-theme="geo-cyberpunk"] .sidebar-menu-item.active {
+	border-left: 3px solid var(--geo-primary) !important;
+	background-color: #0f0f28 !important;
+	color: var(--geo-primary) !important;
+	text-shadow: 0 0 6px rgba(245, 230, 66, 0.4);
+}
+
+[data-geo-theme="geo-cyberpunk"] .sidebar-item:hover,
+[data-geo-theme="geo-cyberpunk"] .standard-sidebar-item:hover {
+	background-color: rgba(0, 212, 255, 0.05);
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Cards and main content panels
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .frappe-card,
+[data-geo-theme="geo-cyberpunk"] .form-page,
+[data-geo-theme="geo-cyberpunk"] .layout-main-section,
+[data-geo-theme="geo-cyberpunk"] .section-body,
+[data-geo-theme="geo-cyberpunk"] .widget-group,
+[data-geo-theme="geo-cyberpunk"] .widget {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: var(--geo-shadow-neon) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .layout-main,
+[data-geo-theme="geo-cyberpunk"] .page-wrapper,
+[data-geo-theme="geo-cyberpunk"] .page-container {
+	background-color: var(--geo-bg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — Primary
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .btn-primary,
+[data-geo-theme="geo-cyberpunk"] button.btn-primary {
+	background-color: var(--geo-primary) !important;
+	color: var(--geo-primary-fg) !important;
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 10px rgba(245, 230, 66, 0.5) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .btn-primary:hover {
+	background-color: #ffe135 !important;
+	box-shadow: 0 0 18px rgba(245, 230, 66, 0.75) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .btn-secondary,
+[data-geo-theme="geo-cyberpunk"] button.btn-default,
+[data-geo-theme="geo-cyberpunk"] .btn-default {
+	background-color: var(--geo-bg-subtle) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .btn-danger {
+	background-color: var(--geo-danger) !important;
+	border-color: var(--geo-danger) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Input Fields
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] input[type="text"],
+[data-geo-theme="geo-cyberpunk"] input[type="email"],
+[data-geo-theme="geo-cyberpunk"] input[type="password"],
+[data-geo-theme="geo-cyberpunk"] input[type="number"],
+[data-geo-theme="geo-cyberpunk"] input[type="search"],
+[data-geo-theme="geo-cyberpunk"] input[type="date"],
+[data-geo-theme="geo-cyberpunk"] input[type="time"],
+[data-geo-theme="geo-cyberpunk"] textarea,
+[data-geo-theme="geo-cyberpunk"] select,
+[data-geo-theme="geo-cyberpunk"] .form-control,
+[data-geo-theme="geo-cyberpunk"] .frappe-control .form-control {
+	background-color: #080818 !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] input:focus,
+[data-geo-theme="geo-cyberpunk"] textarea:focus,
+[data-geo-theme="geo-cyberpunk"] select:focus,
+[data-geo-theme="geo-cyberpunk"] .form-control:focus {
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 0 3px rgba(245, 230, 66, 0.2), 0 0 8px rgba(245, 230, 66, 0.15) !important;
+	outline: none;
+}
+
+[data-geo-theme="geo-cyberpunk"] ::placeholder {
+	color: #555588 !important;
+	opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Badges & Indicators
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .indicator-pill,
+[data-geo-theme="geo-cyberpunk"] .badge {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   List View
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .list-row-container,
+[data-geo-theme="geo-cyberpunk"] .list-row {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .list-row-container:hover,
+[data-geo-theme="geo-cyberpunk"] .list-row:hover {
+	background-color: var(--geo-bg-subtle) !important;
+	box-shadow: inset 0 0 8px rgba(245, 230, 66, 0.06) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .list-row-head {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Modals
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .modal-content,
+[data-geo-theme="geo-cyberpunk"] .modal-dialog .modal-content {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 230, 66, 0.1) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .modal-header {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .modal-header .modal-title {
+	color: var(--geo-primary) !important;
+	text-shadow: 0 0 8px rgba(245, 230, 66, 0.5);
+}
+
+[data-geo-theme="geo-cyberpunk"] .modal-footer {
+	background-color: var(--geo-bg-subtle) !important;
+	border-top: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dropdowns / Menus
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .dropdown-menu,
+[data-geo-theme="geo-cyberpunk"] .autocomplete-results {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), var(--geo-shadow-neon) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .dropdown-item,
+[data-geo-theme="geo-cyberpunk"] .autocomplete-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .dropdown-item:hover,
+[data-geo-theme="geo-cyberpunk"] .autocomplete-item:hover,
+[data-geo-theme="geo-cyberpunk"] .dropdown-item:focus {
+	background-color: #0f0f28 !important;
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .datatable,
+[data-geo-theme="geo-cyberpunk"] .dt-cell,
+[data-geo-theme="geo-cyberpunk"] .dt-header,
+[data-geo-theme="geo-cyberpunk"] table,
+[data-geo-theme="geo-cyberpunk"] th,
+[data-geo-theme="geo-cyberpunk"] td {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border-color: var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .dt-header .dt-cell {
+	background-color: var(--geo-navbar-bg) !important;
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbar — thin, neon yellow thumb, near-black track
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+[data-geo-theme="geo-cyberpunk"] ::-webkit-scrollbar-track {
+	background: #03030a;
+}
+
+[data-geo-theme="geo-cyberpunk"] ::-webkit-scrollbar-thumb {
+	background: #3a3a00;
+	border-radius: 4px;
+}
+
+[data-geo-theme="geo-cyberpunk"] ::-webkit-scrollbar-thumb:hover {
+	background: var(--geo-primary);
+	box-shadow: 0 0 6px rgba(245, 230, 66, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   Frappe Page Title / Breadcrumb
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .title-text,
+[data-geo-theme="geo-cyberpunk"] .page-title .title-text {
+	color: var(--geo-primary) !important;
+	text-shadow: 0 0 8px rgba(245, 230, 66, 0.5);
+}
+
+[data-geo-theme="geo-cyberpunk"] .breadcrumb-item,
+[data-geo-theme="geo-cyberpunk"] .breadcrumb a {
+	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Notifications / Toasts
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .notifications-list,
+[data-geo-theme="geo-cyberpunk"] .alert,
+[data-geo-theme="geo-cyberpunk"] .toast {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Misc — ensure everything is Night City neon
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .page-head,
+[data-geo-theme="geo-cyberpunk"] .page-head-content {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-cyberpunk"] .widget-control,
+[data-geo-theme="geo-cyberpunk"] .widget-title {
+	color: var(--geo-primary) !important;
+	text-shadow: 0 0 8px rgba(245, 230, 66, 0.5);
+}
+
+[data-geo-theme="geo-cyberpunk"] .help-box,
+[data-geo-theme="geo-cyberpunk"] .form-group .help-box {
+	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Home page module links and shortcut text
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-cyberpunk"] .shortcut-widget-box,
+[data-geo-theme="geo-cyberpunk"] .widget-body,
+[data-geo-theme="geo-cyberpunk"] .widget-head .widget-title,
+[data-geo-theme="geo-cyberpunk"] .module-links .btn-link,
+[data-geo-theme="geo-cyberpunk"] .module-links a,
+[data-geo-theme="geo-cyberpunk"] .shortcuts .btn-link,
+[data-geo-theme="geo-cyberpunk"] .shortcuts a,
+[data-geo-theme="geo-cyberpunk"] .onboarding-slide,
+[data-geo-theme="geo-cyberpunk"] .number-card-title {
+	color: var(--geo-fg) !important;
+}
