@@ -1,0 +1,365 @@
+/* ==========================================================================
+   Geo Sunset Theme — Warm Oranges, Purples, Pinks
+   Scoped under [data-geo-theme="geo-sunset"]
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] {
+	--geo-bg: #1a0a2e;
+	--geo-bg-subtle: #2d1b4e;
+	--geo-navbar-bg: #3d1a6e;
+	--geo-sidebar-bg: #241240;
+	--geo-fg: #f5e6d8;
+	--geo-fg-muted: #c49a8a;
+	--geo-primary: #ff6b35;
+	--geo-primary-fg: #ffffff;
+	--geo-accent: #ff6b35;
+	--geo-secondary: #e91e8c;
+	--geo-accent-visited: #ba68c8;
+	--geo-danger: #ff1744;
+	--geo-border: #5a2a7e;
+	--geo-border-subtle: #3a1a5e;
+	--geo-shadow-warm: 0 0 8px rgba(255, 107, 53, 0.2), 0 0 2px rgba(233, 30, 140, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Base / Typography
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"],
+[data-geo-theme="geo-sunset"] body,
+[data-geo-theme="geo-sunset"] input,
+[data-geo-theme="geo-sunset"] textarea,
+[data-geo-theme="geo-sunset"] select,
+[data-geo-theme="geo-sunset"] button,
+[data-geo-theme="geo-sunset"] label,
+[data-geo-theme="geo-sunset"] .frappe-control,
+[data-geo-theme="geo-sunset"] .form-control,
+[data-geo-theme="geo-sunset"] .like-disabled-input {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+	background-color: var(--geo-bg);
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] h1,
+[data-geo-theme="geo-sunset"] h2,
+[data-geo-theme="geo-sunset"] h3,
+[data-geo-theme="geo-sunset"] h4,
+[data-geo-theme="geo-sunset"] .form-section-title,
+[data-geo-theme="geo-sunset"] .list-row-head,
+[data-geo-theme="geo-sunset"] .page-title,
+[data-geo-theme="geo-sunset"] .modal-title {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+	color: var(--geo-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] a,
+[data-geo-theme="geo-sunset"] a:link {
+	color: var(--geo-accent);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+[data-geo-theme="geo-sunset"] a:visited {
+	color: var(--geo-accent-visited);
+}
+
+[data-geo-theme="geo-sunset"] a:hover {
+	color: #ff8f65;
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .navbar,
+[data-geo-theme="geo-sunset"] .navbar-home,
+[data-geo-theme="geo-sunset"] header.navbar {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border);
+	box-shadow: var(--geo-shadow-warm);
+}
+
+[data-geo-theme="geo-sunset"] .navbar .nav-link,
+[data-geo-theme="geo-sunset"] .navbar a {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-sunset"] .navbar .nav-link:hover,
+[data-geo-theme="geo-sunset"] .navbar a:hover {
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .layout-side-section,
+[data-geo-theme="geo-sunset"] .desk-sidebar,
+[data-geo-theme="geo-sunset"] .sidebar-column,
+[data-geo-theme="geo-sunset"] .standard-sidebar {
+	background-color: var(--geo-sidebar-bg) !important;
+	border-right: 1px solid var(--geo-border);
+}
+
+[data-geo-theme="geo-sunset"] .sidebar-item.selected,
+[data-geo-theme="geo-sunset"] .standard-sidebar-item.selected,
+[data-geo-theme="geo-sunset"] .desk-sidebar .sidebar-item.active,
+[data-geo-theme="geo-sunset"] .sidebar-menu-item.active {
+	border-left: 3px solid var(--geo-primary) !important;
+	background-color: #3a1a30 !important;
+	box-shadow: inset 0 0 6px rgba(255, 107, 53, 0.2);
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-sunset"] .sidebar-item:hover,
+[data-geo-theme="geo-sunset"] .standard-sidebar-item:hover {
+	background-color: #2e1550;
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Cards and main content panels
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .frappe-card,
+[data-geo-theme="geo-sunset"] .form-page,
+[data-geo-theme="geo-sunset"] .layout-main-section,
+[data-geo-theme="geo-sunset"] .section-body,
+[data-geo-theme="geo-sunset"] .widget-group,
+[data-geo-theme="geo-sunset"] .widget {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: var(--geo-shadow-warm) !important;
+}
+
+[data-geo-theme="geo-sunset"] .layout-main,
+[data-geo-theme="geo-sunset"] .page-wrapper,
+[data-geo-theme="geo-sunset"] .page-container {
+	background-color: var(--geo-bg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — Primary
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .btn-primary,
+[data-geo-theme="geo-sunset"] button.btn-primary {
+	background-color: var(--geo-primary) !important;
+	color: var(--geo-primary-fg) !important;
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 8px rgba(255, 107, 53, 0.4) !important;
+}
+
+[data-geo-theme="geo-sunset"] .btn-primary:hover {
+	background-color: #ff8f65 !important;
+	box-shadow: 0 0 14px rgba(255, 107, 53, 0.6) !important;
+}
+
+[data-geo-theme="geo-sunset"] .btn-secondary,
+[data-geo-theme="geo-sunset"] button.btn-default,
+[data-geo-theme="geo-sunset"] .btn-default {
+	background-color: var(--geo-bg-subtle) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-sunset"] .btn-danger {
+	background-color: var(--geo-danger) !important;
+	border-color: var(--geo-danger) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Input Fields
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] input[type="text"],
+[data-geo-theme="geo-sunset"] input[type="email"],
+[data-geo-theme="geo-sunset"] input[type="password"],
+[data-geo-theme="geo-sunset"] input[type="number"],
+[data-geo-theme="geo-sunset"] input[type="search"],
+[data-geo-theme="geo-sunset"] input[type="date"],
+[data-geo-theme="geo-sunset"] input[type="time"],
+[data-geo-theme="geo-sunset"] textarea,
+[data-geo-theme="geo-sunset"] select,
+[data-geo-theme="geo-sunset"] .form-control,
+[data-geo-theme="geo-sunset"] .frappe-control .form-control {
+	background-color: #150820 !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-sunset"] input:focus,
+[data-geo-theme="geo-sunset"] textarea:focus,
+[data-geo-theme="geo-sunset"] select:focus,
+[data-geo-theme="geo-sunset"] .form-control:focus {
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.25) !important;
+	outline: none;
+}
+
+[data-geo-theme="geo-sunset"] ::placeholder {
+	color: #7a4a6a !important;
+	opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Badges & Indicators
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .indicator-pill,
+[data-geo-theme="geo-sunset"] .badge {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   List View
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .list-row-container,
+[data-geo-theme="geo-sunset"] .list-row {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-sunset"] .list-row-container:hover,
+[data-geo-theme="geo-sunset"] .list-row:hover {
+	background-color: var(--geo-bg-subtle) !important;
+	box-shadow: inset 0 0 6px rgba(255, 107, 53, 0.15) !important;
+}
+
+[data-geo-theme="geo-sunset"] .list-row-head {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Modals
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .modal-content,
+[data-geo-theme="geo-sunset"] .modal-dialog .modal-content {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 107, 53, 0.15) !important;
+}
+
+[data-geo-theme="geo-sunset"] .modal-header {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-sunset"] .modal-header .modal-title {
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-sunset"] .modal-footer {
+	background-color: var(--geo-bg-subtle) !important;
+	border-top: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dropdowns / Menus
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .dropdown-menu,
+[data-geo-theme="geo-sunset"] .autocomplete-results {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), var(--geo-shadow-warm) !important;
+}
+
+[data-geo-theme="geo-sunset"] .dropdown-item,
+[data-geo-theme="geo-sunset"] .autocomplete-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-sunset"] .dropdown-item:hover,
+[data-geo-theme="geo-sunset"] .autocomplete-item:hover,
+[data-geo-theme="geo-sunset"] .dropdown-item:focus {
+	background-color: #3a1a30 !important;
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .datatable,
+[data-geo-theme="geo-sunset"] .dt-cell,
+[data-geo-theme="geo-sunset"] .dt-header,
+[data-geo-theme="geo-sunset"] table,
+[data-geo-theme="geo-sunset"] th,
+[data-geo-theme="geo-sunset"] td {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border-color: var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-sunset"] .dt-header .dt-cell {
+	background-color: var(--geo-navbar-bg) !important;
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbar — thin, coral thumb, deep purple track
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+[data-geo-theme="geo-sunset"] ::-webkit-scrollbar-track {
+	background: #130820;
+}
+
+[data-geo-theme="geo-sunset"] ::-webkit-scrollbar-thumb {
+	background: #5a2a7e;
+	border-radius: 4px;
+}
+
+[data-geo-theme="geo-sunset"] ::-webkit-scrollbar-thumb:hover {
+	background: var(--geo-primary);
+	box-shadow: var(--geo-shadow-warm);
+}
+
+/* --------------------------------------------------------------------------
+   Frappe Page Title / Breadcrumb
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .title-text,
+[data-geo-theme="geo-sunset"] .page-title .title-text {
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-sunset"] .breadcrumb-item,
+[data-geo-theme="geo-sunset"] .breadcrumb a {
+	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Notifications / Toasts
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .notifications-list,
+[data-geo-theme="geo-sunset"] .alert,
+[data-geo-theme="geo-sunset"] .toast {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Misc — ensure everything is deep dusk
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .page-head,
+[data-geo-theme="geo-sunset"] .page-head-content {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-sunset"] .widget-control,
+[data-geo-theme="geo-sunset"] .widget-title {
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-sunset"] .help-box,
+[data-geo-theme="geo-sunset"] .form-group .help-box {
+	color: var(--geo-fg-muted) !important;
+}

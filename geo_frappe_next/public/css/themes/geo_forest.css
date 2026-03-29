@@ -1,0 +1,361 @@
+/* ==========================================================================
+   Geo Forest Theme — Deep Greens, Earthy Browns
+   Scoped under [data-geo-theme="geo-forest"]
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] {
+	--geo-bg: #0d1f0d;
+	--geo-bg-subtle: #1a2e1a;
+	--geo-navbar-bg: #1f3d1f;
+	--geo-sidebar-bg: #152515;
+	--geo-fg: #d4e8c2;
+	--geo-fg-muted: #8aaf72;
+	--geo-primary: #4caf50;
+	--geo-primary-fg: #000000;
+	--geo-accent: #4caf50;
+	--geo-secondary: #8d6e63;
+	--geo-accent-visited: #a5d6a7;
+	--geo-danger: #e53935;
+	--geo-border: #2d5a2d;
+	--geo-border-subtle: #1e3a1e;
+	--geo-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Base / Typography
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"],
+[data-geo-theme="geo-forest"] body,
+[data-geo-theme="geo-forest"] input,
+[data-geo-theme="geo-forest"] textarea,
+[data-geo-theme="geo-forest"] select,
+[data-geo-theme="geo-forest"] button,
+[data-geo-theme="geo-forest"] label,
+[data-geo-theme="geo-forest"] .frappe-control,
+[data-geo-theme="geo-forest"] .form-control,
+[data-geo-theme="geo-forest"] .like-disabled-input {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+	background-color: var(--geo-bg);
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] h1,
+[data-geo-theme="geo-forest"] h2,
+[data-geo-theme="geo-forest"] h3,
+[data-geo-theme="geo-forest"] h4,
+[data-geo-theme="geo-forest"] .form-section-title,
+[data-geo-theme="geo-forest"] .list-row-head,
+[data-geo-theme="geo-forest"] .page-title,
+[data-geo-theme="geo-forest"] .modal-title {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+	color: var(--geo-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] a,
+[data-geo-theme="geo-forest"] a:link {
+	color: var(--geo-accent);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+[data-geo-theme="geo-forest"] a:visited {
+	color: var(--geo-accent-visited);
+}
+
+[data-geo-theme="geo-forest"] a:hover {
+	color: #81c784;
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .navbar,
+[data-geo-theme="geo-forest"] .navbar-home,
+[data-geo-theme="geo-forest"] header.navbar {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border);
+	box-shadow: var(--geo-shadow);
+}
+
+[data-geo-theme="geo-forest"] .navbar .nav-link,
+[data-geo-theme="geo-forest"] .navbar a {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-forest"] .navbar .nav-link:hover,
+[data-geo-theme="geo-forest"] .navbar a:hover {
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .layout-side-section,
+[data-geo-theme="geo-forest"] .desk-sidebar,
+[data-geo-theme="geo-forest"] .sidebar-column,
+[data-geo-theme="geo-forest"] .standard-sidebar {
+	background-color: var(--geo-sidebar-bg) !important;
+	border-right: 1px solid var(--geo-border);
+}
+
+[data-geo-theme="geo-forest"] .sidebar-item.selected,
+[data-geo-theme="geo-forest"] .standard-sidebar-item.selected,
+[data-geo-theme="geo-forest"] .desk-sidebar .sidebar-item.active,
+[data-geo-theme="geo-forest"] .sidebar-menu-item.active {
+	border-left: 3px solid var(--geo-primary) !important;
+	background-color: #1e3a1e !important;
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-forest"] .sidebar-item:hover,
+[data-geo-theme="geo-forest"] .standard-sidebar-item:hover {
+	background-color: #1a2e1a;
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Cards and main content panels
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .frappe-card,
+[data-geo-theme="geo-forest"] .form-page,
+[data-geo-theme="geo-forest"] .layout-main-section,
+[data-geo-theme="geo-forest"] .section-body,
+[data-geo-theme="geo-forest"] .widget-group,
+[data-geo-theme="geo-forest"] .widget {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: var(--geo-shadow) !important;
+}
+
+[data-geo-theme="geo-forest"] .layout-main,
+[data-geo-theme="geo-forest"] .page-wrapper,
+[data-geo-theme="geo-forest"] .page-container {
+	background-color: var(--geo-bg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — Primary
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .btn-primary,
+[data-geo-theme="geo-forest"] button.btn-primary {
+	background-color: var(--geo-primary) !important;
+	color: var(--geo-primary-fg) !important;
+	border-color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-forest"] .btn-primary:hover {
+	background-color: #66bb6a !important;
+	box-shadow: 0 2px 8px rgba(76, 175, 80, 0.4) !important;
+}
+
+[data-geo-theme="geo-forest"] .btn-secondary,
+[data-geo-theme="geo-forest"] button.btn-default,
+[data-geo-theme="geo-forest"] .btn-default {
+	background-color: var(--geo-bg-subtle) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-forest"] .btn-danger {
+	background-color: var(--geo-danger) !important;
+	border-color: var(--geo-danger) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Input Fields
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] input[type="text"],
+[data-geo-theme="geo-forest"] input[type="email"],
+[data-geo-theme="geo-forest"] input[type="password"],
+[data-geo-theme="geo-forest"] input[type="number"],
+[data-geo-theme="geo-forest"] input[type="search"],
+[data-geo-theme="geo-forest"] input[type="date"],
+[data-geo-theme="geo-forest"] input[type="time"],
+[data-geo-theme="geo-forest"] textarea,
+[data-geo-theme="geo-forest"] select,
+[data-geo-theme="geo-forest"] .form-control,
+[data-geo-theme="geo-forest"] .frappe-control .form-control {
+	background-color: #091509 !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-forest"] input:focus,
+[data-geo-theme="geo-forest"] textarea:focus,
+[data-geo-theme="geo-forest"] select:focus,
+[data-geo-theme="geo-forest"] .form-control:focus {
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.25) !important;
+	outline: none;
+}
+
+[data-geo-theme="geo-forest"] ::placeholder {
+	color: #3a5a3a !important;
+	opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Badges & Indicators
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .indicator-pill,
+[data-geo-theme="geo-forest"] .badge {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   List View
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .list-row-container,
+[data-geo-theme="geo-forest"] .list-row {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-forest"] .list-row-container:hover,
+[data-geo-theme="geo-forest"] .list-row:hover {
+	background-color: var(--geo-bg-subtle) !important;
+}
+
+[data-geo-theme="geo-forest"] .list-row-head {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Modals
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .modal-content,
+[data-geo-theme="geo-forest"] .modal-dialog .modal-content {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-geo-theme="geo-forest"] .modal-header {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-forest"] .modal-header .modal-title {
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-forest"] .modal-footer {
+	background-color: var(--geo-bg-subtle) !important;
+	border-top: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dropdowns / Menus
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .dropdown-menu,
+[data-geo-theme="geo-forest"] .autocomplete-results {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-geo-theme="geo-forest"] .dropdown-item,
+[data-geo-theme="geo-forest"] .autocomplete-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-forest"] .dropdown-item:hover,
+[data-geo-theme="geo-forest"] .autocomplete-item:hover,
+[data-geo-theme="geo-forest"] .dropdown-item:focus {
+	background-color: #1e3a1e !important;
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .datatable,
+[data-geo-theme="geo-forest"] .dt-cell,
+[data-geo-theme="geo-forest"] .dt-header,
+[data-geo-theme="geo-forest"] table,
+[data-geo-theme="geo-forest"] th,
+[data-geo-theme="geo-forest"] td {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border-color: var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-forest"] .dt-header .dt-cell {
+	background-color: var(--geo-navbar-bg) !important;
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbar — thin, green thumb, dark track
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+[data-geo-theme="geo-forest"] ::-webkit-scrollbar-track {
+	background: #080f08;
+}
+
+[data-geo-theme="geo-forest"] ::-webkit-scrollbar-thumb {
+	background: #2d5a2d;
+	border-radius: 4px;
+}
+
+[data-geo-theme="geo-forest"] ::-webkit-scrollbar-thumb:hover {
+	background: var(--geo-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Frappe Page Title / Breadcrumb
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .title-text,
+[data-geo-theme="geo-forest"] .page-title .title-text {
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-forest"] .breadcrumb-item,
+[data-geo-theme="geo-forest"] .breadcrumb a {
+	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Notifications / Toasts
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .notifications-list,
+[data-geo-theme="geo-forest"] .alert,
+[data-geo-theme="geo-forest"] .toast {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Misc — ensure everything is earthy forest
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .page-head,
+[data-geo-theme="geo-forest"] .page-head-content {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-forest"] .widget-control,
+[data-geo-theme="geo-forest"] .widget-title {
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-forest"] .help-box,
+[data-geo-theme="geo-forest"] .form-group .help-box {
+	color: var(--geo-fg-muted) !important;
+}
