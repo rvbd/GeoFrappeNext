@@ -22,6 +22,22 @@
 	--geo-border: #3a6e3a;
 	--geo-border-subtle: #1e3a1e;
 	--geo-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+	/* Override Frappe's own CSS variables */
+	--text-color: #e0f0cc;
+	--text-muted: #a8cc88;
+	--heading-color: #4caf50;
+	--icon-fill: #a8cc88;
+	--icon-stroke: #a8cc88;
+	--bg-color: #0d1f0d;
+	--card-bg: #1e331e;
+	--fg-color: #1e331e;
+	--border-color: #3a6e3a;
+	--dark-border-color: #3a6e3a;
+	--sidebar-bg-color: #152515;
+	--control-bg: #091509;
+	--disabled-text-color: #5a8a5a;
+	--placeholder-color: #5a8a5a;
 }
 
 /* --------------------------------------------------------------------------
@@ -361,16 +377,55 @@
 }
 
 /* --------------------------------------------------------------------------
-   Home page module links and shortcut text
+   Home page — workspace module cards, shortcuts, inner text
    -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .workspace-shortcut,
 [data-geo-theme="geo-forest"] .shortcut-widget-box,
+[data-geo-theme="geo-forest"] .shortcut-widget-box .widget-title,
 [data-geo-theme="geo-forest"] .widget-body,
+[data-geo-theme="geo-forest"] .widget-body p,
+[data-geo-theme="geo-forest"] .widget-body span,
+[data-geo-theme="geo-forest"] .widget-head,
 [data-geo-theme="geo-forest"] .widget-head .widget-title,
+[data-geo-theme="geo-forest"] .widget-title,
 [data-geo-theme="geo-forest"] .module-links .btn-link,
 [data-geo-theme="geo-forest"] .module-links a,
 [data-geo-theme="geo-forest"] .shortcuts .btn-link,
 [data-geo-theme="geo-forest"] .shortcuts a,
 [data-geo-theme="geo-forest"] .onboarding-slide,
-[data-geo-theme="geo-forest"] .number-card-title {
+[data-geo-theme="geo-forest"] .number-card-title,
+[data-geo-theme="geo-forest"] .links-widget-list,
+[data-geo-theme="geo-forest"] .links-widget-list .document-link,
+[data-geo-theme="geo-forest"] .links-widget-list .document-link .document-link-badge,
+[data-geo-theme="geo-forest"] .links-widget-list a,
+[data-geo-theme="geo-forest"] .links-widget-list span,
+[data-geo-theme="geo-forest"] .widget-group .widget,
+[data-geo-theme="geo-forest"] .widget-group .widget *,
+[data-geo-theme="geo-forest"] .frappe-card *:not(.btn-primary):not(.btn-danger):not(.indicator-pill) {
+	color: var(--geo-fg) !important;
+}
+
+/* Card/section titles inside widgets should be primary (green) */
+[data-geo-theme="geo-forest"] .widget-group-title,
+[data-geo-theme="geo-forest"] .widget-group .widget .widget-head .widget-title,
+[data-geo-theme="geo-forest"] .links-widget-list .link-item .link-label {
+	color: var(--geo-primary) !important;
+}
+
+/* Document link badges (the count badges like "21", "187") */
+[data-geo-theme="geo-forest"] .document-link-badge .count,
+[data-geo-theme="geo-forest"] .shortcut-widget-box .badge {
+	background-color: var(--geo-primary) !important;
+	color: #000000 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar item text — explicit color
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .standard-sidebar-item span,
+[data-geo-theme="geo-forest"] .standard-sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-forest"] .desk-sidebar .sidebar-item span,
+[data-geo-theme="geo-forest"] .desk-sidebar .sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-forest"] .sidebar-menu-item span {
 	color: var(--geo-fg) !important;
 }
