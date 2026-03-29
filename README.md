@@ -1,6 +1,7 @@
 ### Geo Frappe Next
 
-Funky theming for ERPNext
+Funky theming for ERPNext.
+Since a lot of people are asking why ERPNext and Frappe are so "plain", so here goes nothing...:)
 
 ### Installation
 
