@@ -17,6 +17,22 @@ def get_user_theme():
 	return theme_doc or ""
 
 
+def add_geo_theme_to_boot(bootinfo):
+	"""Inject the user's Geo theme into frappe.boot so it's available synchronously on page load."""
+	user = frappe.session.user
+	if not user or user == "Guest":
+		bootinfo.geo_theme = ""
+		return
+
+	theme = frappe.db.get_value(
+		"Geo User Theme",
+		{"user": user},
+		"theme",
+		as_dict=False,
+	)
+	bootinfo.geo_theme = theme or ""
+
+
 @frappe.whitelist()
 def set_user_theme(theme: str = ""):
 	"""Persist the Geo theme selection for the current user."""

@@ -102,7 +102,22 @@
 	}
 
 	function loadTheme() {
-		// Try server first if Frappe is ready, fall back to localStorage
+		// 1. Try frappe.boot (synchronous, injected server-side — fastest, no flicker)
+		if (typeof frappe !== "undefined" && frappe.boot && frappe.boot.geo_theme) {
+			applyTheme(frappe.boot.geo_theme);
+			// Keep localStorage in sync
+			try { localStorage.setItem(STORAGE_KEY, frappe.boot.geo_theme); } catch(e) { console.warn("Geo Theme: failed to sync to localStorage", e); }
+			return;
+		}
+
+		// 2. Fall back to localStorage for immediate paint
+		var stored = localStorage.getItem(STORAGE_KEY);
+		if (stored) {
+			applyTheme(stored);
+			return;
+		}
+
+		// 3. Last resort: async API call (handles edge cases where boot data is missing)
 		if (
 			typeof frappe !== "undefined" &&
 			frappe.call &&
@@ -117,16 +132,10 @@
 					var theme = r && r.message ? r.message : "";
 					if (theme) {
 						applyTheme(theme);
-					} else {
-						// Fall back to localStorage
-						var stored = localStorage.getItem(STORAGE_KEY);
-						if (stored) applyTheme(stored);
+						try { localStorage.setItem(STORAGE_KEY, theme); } catch(e) { console.warn("Geo Theme: failed to sync to localStorage", e); }
 					}
 				},
 			});
-		} else {
-			var stored = localStorage.getItem(STORAGE_KEY);
-			if (stored) applyTheme(stored);
 		}
 	}
 
@@ -206,22 +215,17 @@
 	// Boot — wait for Frappe desk to be ready, then load theme and inject UI
 	// -----------------------------------------------------------------------
 	function boot() {
-		// Apply from localStorage immediately for fast paint (avoids flash of unstyled content)
-		var stored = localStorage.getItem(STORAGE_KEY);
-		if (stored) applyTheme(stored);
+		// Apply immediately — frappe.boot is available synchronously at this point
+		loadTheme();
 
-		// Inject picker once the Frappe UI is fully rendered
 		if (typeof frappe !== "undefined" && frappe.after_ajax) {
 			frappe.after_ajax(function () {
-				loadTheme(); // reload from server once Frappe session is ready
 				injectThemePicker();
 			});
 		}
 
-		// Also try on DOMContentLoaded / load as fallback
 		document.addEventListener("frappe-desk-ready", injectThemePicker);
 
-		// Observe DOM changes to inject picker when dropdown first appears; disconnect once done
 		if (window.MutationObserver) {
 			var observer = new MutationObserver(function () {
 				var dropdown = document.querySelector(
