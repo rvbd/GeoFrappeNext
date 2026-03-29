@@ -1,0 +1,365 @@
+/* ==========================================================================
+   Geo Ocean Theme — Deep Ocean Blues and Teals
+   Scoped under [data-geo-theme="geo-ocean"]
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] {
+	--geo-bg: #0a1628;
+	--geo-bg-subtle: #0d1f3c;
+	--geo-navbar-bg: #0a1f4e;
+	--geo-sidebar-bg: #0b1a36;
+	--geo-fg: #cce7f5;
+	--geo-fg-muted: #7ab5d4;
+	--geo-primary: #00bcd4;
+	--geo-primary-fg: #000000;
+	--geo-accent: #00bcd4;
+	--geo-secondary: #64b5f6;
+	--geo-accent-visited: #80cbc4;
+	--geo-danger: #ef5350;
+	--geo-border: #1a3a6e;
+	--geo-border-subtle: #0e2444;
+	--geo-shadow-wave: 0 0 8px rgba(0, 188, 212, 0.25), 0 0 2px rgba(0, 188, 212, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Base / Typography
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"],
+[data-geo-theme="geo-ocean"] body,
+[data-geo-theme="geo-ocean"] input,
+[data-geo-theme="geo-ocean"] textarea,
+[data-geo-theme="geo-ocean"] select,
+[data-geo-theme="geo-ocean"] button,
+[data-geo-theme="geo-ocean"] label,
+[data-geo-theme="geo-ocean"] .frappe-control,
+[data-geo-theme="geo-ocean"] .form-control,
+[data-geo-theme="geo-ocean"] .like-disabled-input {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+	background-color: var(--geo-bg);
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] h1,
+[data-geo-theme="geo-ocean"] h2,
+[data-geo-theme="geo-ocean"] h3,
+[data-geo-theme="geo-ocean"] h4,
+[data-geo-theme="geo-ocean"] .form-section-title,
+[data-geo-theme="geo-ocean"] .list-row-head,
+[data-geo-theme="geo-ocean"] .page-title,
+[data-geo-theme="geo-ocean"] .modal-title {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+	color: var(--geo-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] a,
+[data-geo-theme="geo-ocean"] a:link {
+	color: var(--geo-accent);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+[data-geo-theme="geo-ocean"] a:visited {
+	color: var(--geo-accent-visited);
+}
+
+[data-geo-theme="geo-ocean"] a:hover {
+	color: #26c6da;
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .navbar,
+[data-geo-theme="geo-ocean"] .navbar-home,
+[data-geo-theme="geo-ocean"] header.navbar {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border);
+	box-shadow: var(--geo-shadow-wave);
+}
+
+[data-geo-theme="geo-ocean"] .navbar .nav-link,
+[data-geo-theme="geo-ocean"] .navbar a {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-ocean"] .navbar .nav-link:hover,
+[data-geo-theme="geo-ocean"] .navbar a:hover {
+	color: var(--geo-accent) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .layout-side-section,
+[data-geo-theme="geo-ocean"] .desk-sidebar,
+[data-geo-theme="geo-ocean"] .sidebar-column,
+[data-geo-theme="geo-ocean"] .standard-sidebar {
+	background-color: var(--geo-sidebar-bg) !important;
+	border-right: 1px solid var(--geo-border);
+}
+
+[data-geo-theme="geo-ocean"] .sidebar-item.selected,
+[data-geo-theme="geo-ocean"] .standard-sidebar-item.selected,
+[data-geo-theme="geo-ocean"] .desk-sidebar .sidebar-item.active,
+[data-geo-theme="geo-ocean"] .sidebar-menu-item.active {
+	border-left: 3px solid var(--geo-accent) !important;
+	background-color: #0d2a3e !important;
+	box-shadow: inset 0 0 6px rgba(0, 188, 212, 0.2);
+	color: var(--geo-accent) !important;
+}
+
+[data-geo-theme="geo-ocean"] .sidebar-item:hover,
+[data-geo-theme="geo-ocean"] .standard-sidebar-item:hover {
+	background-color: #0e2444;
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Cards and main content panels
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .frappe-card,
+[data-geo-theme="geo-ocean"] .form-page,
+[data-geo-theme="geo-ocean"] .layout-main-section,
+[data-geo-theme="geo-ocean"] .section-body,
+[data-geo-theme="geo-ocean"] .widget-group,
+[data-geo-theme="geo-ocean"] .widget {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: var(--geo-shadow-wave) !important;
+}
+
+[data-geo-theme="geo-ocean"] .layout-main,
+[data-geo-theme="geo-ocean"] .page-wrapper,
+[data-geo-theme="geo-ocean"] .page-container {
+	background-color: var(--geo-bg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — Primary
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .btn-primary,
+[data-geo-theme="geo-ocean"] button.btn-primary {
+	background-color: var(--geo-primary) !important;
+	color: var(--geo-primary-fg) !important;
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 6px rgba(0, 188, 212, 0.4) !important;
+}
+
+[data-geo-theme="geo-ocean"] .btn-primary:hover {
+	background-color: #26c6da !important;
+	box-shadow: 0 0 12px rgba(0, 188, 212, 0.6) !important;
+}
+
+[data-geo-theme="geo-ocean"] .btn-secondary,
+[data-geo-theme="geo-ocean"] button.btn-default,
+[data-geo-theme="geo-ocean"] .btn-default {
+	background-color: var(--geo-bg-subtle) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-ocean"] .btn-danger {
+	background-color: var(--geo-danger) !important;
+	border-color: var(--geo-danger) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Input Fields
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] input[type="text"],
+[data-geo-theme="geo-ocean"] input[type="email"],
+[data-geo-theme="geo-ocean"] input[type="password"],
+[data-geo-theme="geo-ocean"] input[type="number"],
+[data-geo-theme="geo-ocean"] input[type="search"],
+[data-geo-theme="geo-ocean"] input[type="date"],
+[data-geo-theme="geo-ocean"] input[type="time"],
+[data-geo-theme="geo-ocean"] textarea,
+[data-geo-theme="geo-ocean"] select,
+[data-geo-theme="geo-ocean"] .form-control,
+[data-geo-theme="geo-ocean"] .frappe-control .form-control {
+	background-color: #081524 !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-ocean"] input:focus,
+[data-geo-theme="geo-ocean"] textarea:focus,
+[data-geo-theme="geo-ocean"] select:focus,
+[data-geo-theme="geo-ocean"] .form-control:focus {
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.25) !important;
+	outline: none;
+}
+
+[data-geo-theme="geo-ocean"] ::placeholder {
+	color: #3a6080 !important;
+	opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Badges & Indicators
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .indicator-pill,
+[data-geo-theme="geo-ocean"] .badge {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   List View
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .list-row-container,
+[data-geo-theme="geo-ocean"] .list-row {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-ocean"] .list-row-container:hover,
+[data-geo-theme="geo-ocean"] .list-row:hover {
+	background-color: var(--geo-bg-subtle) !important;
+	box-shadow: inset 0 0 6px rgba(0, 188, 212, 0.15) !important;
+}
+
+[data-geo-theme="geo-ocean"] .list-row-head {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Modals
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .modal-content,
+[data-geo-theme="geo-ocean"] .modal-dialog .modal-content {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 188, 212, 0.15) !important;
+}
+
+[data-geo-theme="geo-ocean"] .modal-header {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-ocean"] .modal-header .modal-title {
+	color: var(--geo-secondary) !important;
+}
+
+[data-geo-theme="geo-ocean"] .modal-footer {
+	background-color: var(--geo-bg-subtle) !important;
+	border-top: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dropdowns / Menus
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .dropdown-menu,
+[data-geo-theme="geo-ocean"] .autocomplete-results {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), var(--geo-shadow-wave) !important;
+}
+
+[data-geo-theme="geo-ocean"] .dropdown-item,
+[data-geo-theme="geo-ocean"] .autocomplete-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-ocean"] .dropdown-item:hover,
+[data-geo-theme="geo-ocean"] .autocomplete-item:hover,
+[data-geo-theme="geo-ocean"] .dropdown-item:focus {
+	background-color: #0d2a3e !important;
+	color: var(--geo-accent) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .datatable,
+[data-geo-theme="geo-ocean"] .dt-cell,
+[data-geo-theme="geo-ocean"] .dt-header,
+[data-geo-theme="geo-ocean"] table,
+[data-geo-theme="geo-ocean"] th,
+[data-geo-theme="geo-ocean"] td {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border-color: var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-ocean"] .dt-header .dt-cell {
+	background-color: var(--geo-navbar-bg) !important;
+	color: var(--geo-secondary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbar — thin, teal thumb, deep track
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+[data-geo-theme="geo-ocean"] ::-webkit-scrollbar-track {
+	background: #06101e;
+}
+
+[data-geo-theme="geo-ocean"] ::-webkit-scrollbar-thumb {
+	background: #1a4a6e;
+	border-radius: 4px;
+}
+
+[data-geo-theme="geo-ocean"] ::-webkit-scrollbar-thumb:hover {
+	background: var(--geo-primary);
+	box-shadow: var(--geo-shadow-wave);
+}
+
+/* --------------------------------------------------------------------------
+   Frappe Page Title / Breadcrumb
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .title-text,
+[data-geo-theme="geo-ocean"] .page-title .title-text {
+	color: var(--geo-secondary) !important;
+}
+
+[data-geo-theme="geo-ocean"] .breadcrumb-item,
+[data-geo-theme="geo-ocean"] .breadcrumb a {
+	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Notifications / Toasts
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .notifications-list,
+[data-geo-theme="geo-ocean"] .alert,
+[data-geo-theme="geo-ocean"] .toast {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Misc — ensure everything is deep ocean
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .page-head,
+[data-geo-theme="geo-ocean"] .page-head-content {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-ocean"] .widget-control,
+[data-geo-theme="geo-ocean"] .widget-title {
+	color: var(--geo-secondary) !important;
+}
+
+[data-geo-theme="geo-ocean"] .help-box,
+[data-geo-theme="geo-ocean"] .form-group .help-box {
+	color: var(--geo-fg-muted) !important;
+}

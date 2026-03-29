@@ -15,7 +15,7 @@
 
 	var ATTR = "data-geo-theme";
 	var STORAGE_KEY = "geo_theme";
-	var DARK_THEMES = ["geo-dark", "geo-ocean", "geo-jam"];
+	var DARK_THEMES = ["geo-dark", "geo-ocean", "geo-jam", "geo-vista"];
 
 	var GEO_THEMES = [
 		{ value: "geo-light", label: "🌤 Geo Light" },
@@ -24,6 +24,7 @@
 		{ value: "geo-sunset", label: "🌇 Geo Sunset" },
 		{ value: "geo-forest", label: "🌲 Geo Forest" },
 		{ value: "geo-jam", label: "🏀 Geo Jam" },
+		{ value: "geo-vista", label: "🪟 Geo Vista" },
 	];
 
 	// -----------------------------------------------------------------------

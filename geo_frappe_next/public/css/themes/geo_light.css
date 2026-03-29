@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Geo Light Theme — Clean, Professional Light
+   Scoped under [data-geo-theme="geo-light"]
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] {
+	--geo-bg: #ffffff;
+	--geo-bg-subtle: #f5f7fa;
+	--geo-navbar-bg: #ffffff;
+	--geo-sidebar-bg: #f0f2f5;
+	--geo-fg: #1a1a2e;
+	--geo-fg-muted: #5f6368;
+	--geo-primary: #1a73e8;
+	--geo-primary-fg: #ffffff;
+	--geo-accent: #1a73e8;
+	--geo-accent-visited: #6200ea;
+	--geo-danger: #d93025;
+	--geo-border: #dadce0;
+	--geo-border-subtle: #e8eaed;
+	--geo-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   Base / Typography
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"],
+[data-geo-theme="geo-light"] body,
+[data-geo-theme="geo-light"] input,
+[data-geo-theme="geo-light"] textarea,
+[data-geo-theme="geo-light"] select,
+[data-geo-theme="geo-light"] button,
+[data-geo-theme="geo-light"] label,
+[data-geo-theme="geo-light"] .frappe-control,
+[data-geo-theme="geo-light"] .form-control,
+[data-geo-theme="geo-light"] .like-disabled-input {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+	background-color: var(--geo-bg);
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] h1,
+[data-geo-theme="geo-light"] h2,
+[data-geo-theme="geo-light"] h3,
+[data-geo-theme="geo-light"] h4,
+[data-geo-theme="geo-light"] .form-section-title,
+[data-geo-theme="geo-light"] .list-row-head,
+[data-geo-theme="geo-light"] .page-title,
+[data-geo-theme="geo-light"] .modal-title {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] a,
+[data-geo-theme="geo-light"] a:link {
+	color: var(--geo-primary);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+[data-geo-theme="geo-light"] a:visited {
+	color: var(--geo-accent-visited);
+}
+
+[data-geo-theme="geo-light"] a:hover {
+	color: #1557b0;
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .navbar,
+[data-geo-theme="geo-light"] .navbar-home,
+[data-geo-theme="geo-light"] header.navbar {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border);
+	box-shadow: var(--geo-shadow);
+}
+
+[data-geo-theme="geo-light"] .navbar .nav-link,
+[data-geo-theme="geo-light"] .navbar a {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-light"] .navbar .nav-link:hover,
+[data-geo-theme="geo-light"] .navbar a:hover {
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .layout-side-section,
+[data-geo-theme="geo-light"] .desk-sidebar,
+[data-geo-theme="geo-light"] .sidebar-column,
+[data-geo-theme="geo-light"] .standard-sidebar {
+	background-color: var(--geo-sidebar-bg) !important;
+	border-right: 1px solid var(--geo-border);
+}
+
+[data-geo-theme="geo-light"] .sidebar-item.selected,
+[data-geo-theme="geo-light"] .standard-sidebar-item.selected,
+[data-geo-theme="geo-light"] .desk-sidebar .sidebar-item.active,
+[data-geo-theme="geo-light"] .sidebar-menu-item.active {
+	border-left: 3px solid var(--geo-primary) !important;
+	background-color: #e8f0fe !important;
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-light"] .sidebar-item:hover,
+[data-geo-theme="geo-light"] .standard-sidebar-item:hover {
+	background-color: #e8eaed;
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Cards and main content panels
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .frappe-card,
+[data-geo-theme="geo-light"] .form-page,
+[data-geo-theme="geo-light"] .layout-main-section,
+[data-geo-theme="geo-light"] .section-body,
+[data-geo-theme="geo-light"] .widget-group,
+[data-geo-theme="geo-light"] .widget {
+	background-color: var(--geo-bg) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: var(--geo-shadow) !important;
+}
+
+[data-geo-theme="geo-light"] .layout-main,
+[data-geo-theme="geo-light"] .page-wrapper,
+[data-geo-theme="geo-light"] .page-container {
+	background-color: var(--geo-bg-subtle) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — Primary
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .btn-primary,
+[data-geo-theme="geo-light"] button.btn-primary {
+	background-color: var(--geo-primary) !important;
+	color: var(--geo-primary-fg) !important;
+	border-color: var(--geo-primary) !important;
+	box-shadow: var(--geo-shadow) !important;
+}
+
+[data-geo-theme="geo-light"] .btn-primary:hover {
+	background-color: #1557b0 !important;
+	box-shadow: 0 2px 6px rgba(26, 115, 232, 0.4) !important;
+}
+
+[data-geo-theme="geo-light"] .btn-secondary,
+[data-geo-theme="geo-light"] button.btn-default,
+[data-geo-theme="geo-light"] .btn-default {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-light"] .btn-danger {
+	background-color: var(--geo-danger) !important;
+	border-color: var(--geo-danger) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Input Fields
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] input[type="text"],
+[data-geo-theme="geo-light"] input[type="email"],
+[data-geo-theme="geo-light"] input[type="password"],
+[data-geo-theme="geo-light"] input[type="number"],
+[data-geo-theme="geo-light"] input[type="search"],
+[data-geo-theme="geo-light"] input[type="date"],
+[data-geo-theme="geo-light"] input[type="time"],
+[data-geo-theme="geo-light"] textarea,
+[data-geo-theme="geo-light"] select,
+[data-geo-theme="geo-light"] .form-control,
+[data-geo-theme="geo-light"] .frappe-control .form-control {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-light"] input:focus,
+[data-geo-theme="geo-light"] textarea:focus,
+[data-geo-theme="geo-light"] select:focus,
+[data-geo-theme="geo-light"] .form-control:focus {
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2) !important;
+	outline: none;
+}
+
+[data-geo-theme="geo-light"] ::placeholder {
+	color: #9aa0a6 !important;
+	opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Badges & Indicators
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .indicator-pill,
+[data-geo-theme="geo-light"] .badge {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   List View
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .list-row-container,
+[data-geo-theme="geo-light"] .list-row {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-light"] .list-row-container:hover,
+[data-geo-theme="geo-light"] .list-row:hover {
+	background-color: #f8f9fa !important;
+}
+
+[data-geo-theme="geo-light"] .list-row-head {
+	background-color: var(--geo-bg-subtle) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Modals
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .modal-content,
+[data-geo-theme="geo-light"] .modal-dialog .modal-content {
+	background-color: var(--geo-bg) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-geo-theme="geo-light"] .modal-header {
+	background-color: var(--geo-bg-subtle) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-light"] .modal-header .modal-title {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-light"] .modal-footer {
+	background-color: var(--geo-bg-subtle) !important;
+	border-top: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dropdowns / Menus
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .dropdown-menu,
+[data-geo-theme="geo-light"] .autocomplete-results {
+	background-color: var(--geo-bg) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+[data-geo-theme="geo-light"] .dropdown-item,
+[data-geo-theme="geo-light"] .autocomplete-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-light"] .dropdown-item:hover,
+[data-geo-theme="geo-light"] .autocomplete-item:hover,
+[data-geo-theme="geo-light"] .dropdown-item:focus {
+	background-color: #e8f0fe !important;
+	color: var(--geo-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .datatable,
+[data-geo-theme="geo-light"] .dt-cell,
+[data-geo-theme="geo-light"] .dt-header,
+[data-geo-theme="geo-light"] table,
+[data-geo-theme="geo-light"] th,
+[data-geo-theme="geo-light"] td {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border-color: var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-light"] .dt-header .dt-cell {
+	background-color: var(--geo-bg-subtle) !important;
+	color: var(--geo-fg) !important;
+	font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbar — thin, accent thumb, light track
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+[data-geo-theme="geo-light"] ::-webkit-scrollbar-track {
+	background: var(--geo-bg-subtle);
+}
+
+[data-geo-theme="geo-light"] ::-webkit-scrollbar-thumb {
+	background: #c0c4cc;
+	border-radius: 4px;
+}
+
+[data-geo-theme="geo-light"] ::-webkit-scrollbar-thumb:hover {
+	background: var(--geo-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Frappe Page Title / Breadcrumb
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .title-text,
+[data-geo-theme="geo-light"] .page-title .title-text {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-light"] .breadcrumb-item,
+[data-geo-theme="geo-light"] .breadcrumb a {
+	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Notifications / Toasts
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .notifications-list,
+[data-geo-theme="geo-light"] .alert,
+[data-geo-theme="geo-light"] .toast {
+	background-color: var(--geo-bg) !important;
+	border: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Misc — ensure consistent light styling
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-light"] .page-head,
+[data-geo-theme="geo-light"] .page-head-content {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-light"] .widget-control,
+[data-geo-theme="geo-light"] .widget-title {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-light"] .help-box,
+[data-geo-theme="geo-light"] .form-group .help-box {
+	color: var(--geo-fg-muted) !important;
+}

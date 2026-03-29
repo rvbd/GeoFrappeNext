@@ -25,7 +25,15 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = ["/assets/geo_frappe_next/css/themes/geo_jam.css"]
+app_include_css = [
+    "/assets/geo_frappe_next/css/themes/geo_light.css",
+    "/assets/geo_frappe_next/css/themes/geo_dark.css",
+    "/assets/geo_frappe_next/css/themes/geo_ocean.css",
+    "/assets/geo_frappe_next/css/themes/geo_sunset.css",
+    "/assets/geo_frappe_next/css/themes/geo_forest.css",
+    "/assets/geo_frappe_next/css/themes/geo_jam.css",
+    "/assets/geo_frappe_next/css/themes/geo_vista.css",
+]
 
 boot_session = "geo_frappe_next.api.add_geo_theme_to_boot"
 app_include_js = [
