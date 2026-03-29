@@ -244,7 +244,6 @@
 /* --------------------------------------------------------------------------
    Badges & Indicators
    -------------------------------------------------------------------------- */
-[data-geo-theme="geo-cyberpunk"] .indicator-pill,
 [data-geo-theme="geo-cyberpunk"] .badge {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
@@ -611,25 +610,135 @@
 }
 
 /* --------------------------------------------------------------------------
-   Indicator Pills — force dark text so pastels are legible on deep bg
+   Indicator Pills — transparent bg, neon outline + text per status colour
    -------------------------------------------------------------------------- */
+
+/* Reset all pills: transparent bg, border-based design */
 [data-geo-theme="geo-cyberpunk"] .indicator-pill,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1.5px solid currentColor !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.75em !important;
+    padding: 2px 8px !important;
+}
+
+/* Also hide the dot that sits before the pill text (it uses the bg color) */
+[data-geo-theme="geo-cyberpunk"] .indicator-pill::before,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right::before,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round::before {
+    display: none !important;
+}
+
+/* Per-colour overrides */
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.green,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.green,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.green {
+    color: #00ff88 !important;
+    border-color: #00ff88 !important;
+    text-shadow: 0 0 6px rgba(0, 255, 136, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.red,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.red,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.red {
+    color: #ff3c00 !important;
+    border-color: #ff3c00 !important;
+    text-shadow: 0 0 6px rgba(255, 60, 0, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.pink,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.pink,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.pink {
+    color: #ff00aa !important;
+    border-color: #ff00aa !important;
+    text-shadow: 0 0 6px rgba(255, 0, 170, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.orange,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.orange,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.orange {
+    color: #ff8c00 !important;
+    border-color: #ff8c00 !important;
+    text-shadow: 0 0 6px rgba(255, 140, 0, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.yellow,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.yellow,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.yellow {
+    color: #f5e642 !important;
+    border-color: #f5e642 !important;
+    text-shadow: 0 0 6px rgba(245, 230, 66, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.blue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.blue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.blue {
+    color: #00d4ff !important;
+    border-color: #00d4ff !important;
+    text-shadow: 0 0 6px rgba(0, 212, 255, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.purple,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.purple,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.purple {
+    color: #cc44ff !important;
+    border-color: #cc44ff !important;
+    text-shadow: 0 0 6px rgba(204, 68, 255, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.cyan,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.cyan,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.cyan {
+    color: #00ffee !important;
+    border-color: #00ffee !important;
+    text-shadow: 0 0 6px rgba(0, 255, 238, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.gray,
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.grey,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.gray,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.grey,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.gray,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.grey {
+    color: #8888b0 !important;
+    border-color: #8888b0 !important;
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.light-blue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill.lblue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.light-blue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.lblue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.light-blue,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.lblue {
+    color: #66ccff !important;
+    border-color: #66ccff !important;
+    text-shadow: 0 0 6px rgba(102, 204, 255, 0.5);
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.darkgrey,
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.dark,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.darkgrey,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.dark,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.darkgrey,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.dark {
+    color: #6666aa !important;
+    border-color: #6666aa !important;
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.white,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.white,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.white {
+    color: #e8e8f0 !important;
+    border-color: #e8e8f0 !important;
+}
+
 [data-geo-theme="geo-cyberpunk"] .indicator-pill.black,
-[data-geo-theme="geo-cyberpunk"] .indicator-pill.lblue {
-	color: #0d0d20 !important;
-	font-weight: 600;
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-right.black,
+[data-geo-theme="geo-cyberpunk"] .indicator-pill-round.black {
+    color: #8888b0 !important;
+    border-color: #8888b0 !important;
 }

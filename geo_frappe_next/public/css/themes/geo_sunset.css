@@ -225,9 +225,133 @@
 /* --------------------------------------------------------------------------
    Badges & Indicators
    -------------------------------------------------------------------------- */
-[data-geo-theme="geo-sunset"] .indicator-pill,
 [data-geo-theme="geo-sunset"] .badge {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   Indicator Pills — transparent bg, warm outline + text per status colour
+   -------------------------------------------------------------------------- */
+
+/* Reset all pills: transparent bg, border-based design */
+[data-geo-theme="geo-sunset"] .indicator-pill,
+[data-geo-theme="geo-sunset"] .indicator-pill-right,
+[data-geo-theme="geo-sunset"] .indicator-pill-round {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 1.5px solid currentColor !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.75em !important;
+    padding: 2px 8px !important;
+}
+
+/* Also hide the dot that sits before the pill text (it uses the bg color) */
+[data-geo-theme="geo-sunset"] .indicator-pill::before,
+[data-geo-theme="geo-sunset"] .indicator-pill-right::before,
+[data-geo-theme="geo-sunset"] .indicator-pill-round::before {
+    display: none !important;
+}
+
+/* Per-colour overrides */
+[data-geo-theme="geo-sunset"] .indicator-pill.green,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.green,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.green {
+    color: #69f0ae !important;
+    border-color: #69f0ae !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.red,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.red,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.red {
+    color: #ff5252 !important;
+    border-color: #ff5252 !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.pink,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.pink,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.pink {
+    color: #ff4081 !important;
+    border-color: #ff4081 !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.orange,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.orange,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.orange {
+    color: #ff6b35 !important;
+    border-color: #ff6b35 !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.yellow,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.yellow,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.yellow {
+    color: #ffd740 !important;
+    border-color: #ffd740 !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.blue,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.blue,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.blue {
+    color: #82b1ff !important;
+    border-color: #82b1ff !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.purple,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.purple,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.purple {
+    color: #e040fb !important;
+    border-color: #e040fb !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.cyan,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.cyan,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.cyan {
+    color: #18ffff !important;
+    border-color: #18ffff !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.gray,
+[data-geo-theme="geo-sunset"] .indicator-pill.grey,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.gray,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.grey,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.gray,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.grey {
+    color: #c49a8a !important;
+    border-color: #c49a8a !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.light-blue,
+[data-geo-theme="geo-sunset"] .indicator-pill.lblue,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.light-blue,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.lblue,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.light-blue,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.lblue {
+    color: #80d8ff !important;
+    border-color: #80d8ff !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.darkgrey,
+[data-geo-theme="geo-sunset"] .indicator-pill.dark,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.darkgrey,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.dark,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.darkgrey,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.dark {
+    color: #9a7a8a !important;
+    border-color: #9a7a8a !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.white,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.white,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.white {
+    color: #f5e6d8 !important;
+    border-color: #f5e6d8 !important;
+}
+
+[data-geo-theme="geo-sunset"] .indicator-pill.black,
+[data-geo-theme="geo-sunset"] .indicator-pill-right.black,
+[data-geo-theme="geo-sunset"] .indicator-pill-round.black {
+    color: #c49a8a !important;
+    border-color: #c49a8a !important;
 }
 
 /* --------------------------------------------------------------------------
