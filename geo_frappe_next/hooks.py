@@ -25,8 +25,11 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/geo_frappe_next/css/geo_frappe_next.css"
-# app_include_js = "/assets/geo_frappe_next/js/geo_frappe_next.js"
+app_include_css = "/assets/geo_frappe_next/css/themes/geo_jam.css"
+app_include_js = [
+	"/assets/geo_frappe_next/js/starfield.js",
+	"/assets/geo_frappe_next/js/geo_theme.js",
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/geo_frappe_next/css/geo_frappe_next.css"

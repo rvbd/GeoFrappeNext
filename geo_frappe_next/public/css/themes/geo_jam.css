@@ -1,0 +1,415 @@
+/* ==========================================================================
+   Geo Jam Theme — Space Jam '96 Inspired
+   Scoped under [data-geo-theme="geo-jam"]
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] {
+	--geo-bg: #000000;
+	--geo-bg-subtle: #00003a;
+	--geo-navbar-bg: #000066;
+	--geo-sidebar-bg: #000044;
+	--geo-fg: #ffffff;
+	--geo-fg-muted: #ccccff;
+	--geo-primary: #ffd700;
+	--geo-primary-fg: #000000;
+	--geo-accent: #00ffff;
+	--geo-accent-visited: #ff00ff;
+	--geo-danger: #ff4500;
+	--geo-border: #ffd700;
+	--geo-border-subtle: #000088;
+	--geo-shadow-glow-gold: 0 0 12px #ffd700, 0 0 24px #ffd70088;
+	--geo-shadow-glow-cyan: 0 0 12px #00ffff, 0 0 24px #00ffff88;
+}
+
+/* --------------------------------------------------------------------------
+   Base / Typography — Comic Sans everywhere, no exceptions
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"],
+[data-geo-theme="geo-jam"] body,
+[data-geo-theme="geo-jam"] input,
+[data-geo-theme="geo-jam"] textarea,
+[data-geo-theme="geo-jam"] select,
+[data-geo-theme="geo-jam"] button,
+[data-geo-theme="geo-jam"] label,
+[data-geo-theme="geo-jam"] .frappe-control,
+[data-geo-theme="geo-jam"] .form-control,
+[data-geo-theme="geo-jam"] .like-disabled-input {
+	font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', cursive !important;
+	background-color: var(--geo-bg);
+	color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Headings — Impact for that extra punch
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] h1,
+[data-geo-theme="geo-jam"] h2,
+[data-geo-theme="geo-jam"] h3,
+[data-geo-theme="geo-jam"] h4,
+[data-geo-theme="geo-jam"] .form-section-title,
+[data-geo-theme="geo-jam"] .list-row-head,
+[data-geo-theme="geo-jam"] .page-title,
+[data-geo-theme="geo-jam"] .modal-title {
+	font-family: Impact, 'Arial Black', 'Comic Sans MS', cursive !important;
+	text-transform: uppercase;
+	color: var(--geo-primary);
+	text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd70088;
+}
+
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] a,
+[data-geo-theme="geo-jam"] a:link {
+	color: var(--geo-accent);
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+[data-geo-theme="geo-jam"] a:visited {
+	color: var(--geo-accent-visited);
+}
+
+[data-geo-theme="geo-jam"] a:hover {
+	color: #ff00ff;
+	text-shadow: 0 0 8px #ff00ff;
+	transform: scale(1.05);
+	display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .navbar,
+[data-geo-theme="geo-jam"] .navbar-home,
+[data-geo-theme="geo-jam"] header.navbar {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 2px solid var(--geo-border);
+	box-shadow: var(--geo-shadow-glow-gold);
+	font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .navbar .navbar-brand,
+[data-geo-theme="geo-jam"] .navbar .app-logo {
+	text-shadow: var(--geo-shadow-glow-gold);
+}
+
+[data-geo-theme="geo-jam"] .navbar .nav-link,
+[data-geo-theme="geo-jam"] .navbar a {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-jam"] .navbar .nav-link:hover,
+[data-geo-theme="geo-jam"] .navbar a:hover {
+	color: var(--geo-accent) !important;
+	text-shadow: var(--geo-shadow-glow-cyan);
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .layout-side-section,
+[data-geo-theme="geo-jam"] .desk-sidebar,
+[data-geo-theme="geo-jam"] .sidebar-column,
+[data-geo-theme="geo-jam"] .standard-sidebar {
+	background-color: var(--geo-sidebar-bg) !important;
+	border-right: 1px solid var(--geo-border-subtle);
+	font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .sidebar-item.selected,
+[data-geo-theme="geo-jam"] .standard-sidebar-item.selected,
+[data-geo-theme="geo-jam"] .desk-sidebar .sidebar-item.active,
+[data-geo-theme="geo-jam"] .sidebar-menu-item.active {
+	border-left: 4px solid var(--geo-accent) !important;
+	background-color: #001a1a !important;
+	box-shadow: inset 0 0 8px #00ffff33;
+	color: var(--geo-accent) !important;
+}
+
+[data-geo-theme="geo-jam"] .sidebar-item:hover,
+[data-geo-theme="geo-jam"] .standard-sidebar-item:hover {
+	background-color: #001a1a;
+	color: var(--geo-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Cards and main content panels
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .frappe-card,
+[data-geo-theme="geo-jam"] .form-page,
+[data-geo-theme="geo-jam"] .layout-main-section,
+[data-geo-theme="geo-jam"] .section-body,
+[data-geo-theme="geo-jam"] .widget-group,
+[data-geo-theme="geo-jam"] .widget {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: 0 0 16px #00ffff44 !important;
+}
+
+[data-geo-theme="geo-jam"] .layout-main,
+[data-geo-theme="geo-jam"] .page-wrapper,
+[data-geo-theme="geo-jam"] .page-container {
+	background-color: var(--geo-bg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — Primary
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .btn-primary,
+[data-geo-theme="geo-jam"] button.btn-primary {
+	background-color: var(--geo-primary) !important;
+	color: var(--geo-primary-fg) !important;
+	border-color: var(--geo-primary) !important;
+	box-shadow: var(--geo-shadow-glow-gold) !important;
+	font-family: Impact, 'Arial Black', cursive !important;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+[data-geo-theme="geo-jam"] .btn-primary:hover {
+	background-color: #ffea00 !important;
+	box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd70088 !important;
+}
+
+[data-geo-theme="geo-jam"] .btn-secondary,
+[data-geo-theme="geo-jam"] button.btn-default,
+[data-geo-theme="geo-jam"] .btn-default {
+	background-color: var(--geo-bg-subtle) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border-subtle) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .btn-danger {
+	background-color: var(--geo-danger) !important;
+	border-color: var(--geo-danger) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Input Fields
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] input[type="text"],
+[data-geo-theme="geo-jam"] input[type="email"],
+[data-geo-theme="geo-jam"] input[type="password"],
+[data-geo-theme="geo-jam"] input[type="number"],
+[data-geo-theme="geo-jam"] input[type="search"],
+[data-geo-theme="geo-jam"] input[type="date"],
+[data-geo-theme="geo-jam"] input[type="time"],
+[data-geo-theme="geo-jam"] textarea,
+[data-geo-theme="geo-jam"] select,
+[data-geo-theme="geo-jam"] .form-control,
+[data-geo-theme="geo-jam"] .frappe-control .form-control {
+	background-color: #000033 !important;
+	color: var(--geo-fg-muted) !important;
+	border: 1px solid var(--geo-border-subtle) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] input:focus,
+[data-geo-theme="geo-jam"] textarea:focus,
+[data-geo-theme="geo-jam"] select:focus,
+[data-geo-theme="geo-jam"] .form-control:focus {
+	border-color: var(--geo-primary) !important;
+	box-shadow: 0 0 8px #ffd70088 !important;
+	outline: none;
+}
+
+[data-geo-theme="geo-jam"] ::placeholder {
+	color: #8888cc !important;
+	opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Blinking Badges & Indicators — peak 1996 authenticity
+   -------------------------------------------------------------------------- */
+@keyframes geo-blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.3; }
+}
+
+[data-geo-theme="geo-jam"] .indicator-pill,
+[data-geo-theme="geo-jam"] .badge {
+	animation: geo-blink 1.2s ease-in-out infinite;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+/* --------------------------------------------------------------------------
+   List View
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .list-row-container,
+[data-geo-theme="geo-jam"] .list-row {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .list-row-container:hover,
+[data-geo-theme="geo-jam"] .list-row:hover {
+	background-color: var(--geo-bg-subtle) !important;
+	box-shadow: inset 0 0 8px #00ffff33 !important;
+}
+
+[data-geo-theme="geo-jam"] .list-row-head {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 2px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Modals
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .modal-content,
+[data-geo-theme="geo-jam"] .modal-dialog .modal-content {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 2px solid var(--geo-border) !important;
+	box-shadow: 0 0 32px #ffd70066 !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .modal-header {
+	background-color: var(--geo-navbar-bg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-jam"] .modal-header .modal-title {
+	color: var(--geo-primary) !important;
+	text-shadow: var(--geo-shadow-glow-gold);
+}
+
+[data-geo-theme="geo-jam"] .modal-footer {
+	background-color: var(--geo-bg-subtle) !important;
+	border-top: 1px solid var(--geo-border-subtle) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Dropdowns / Menus
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .dropdown-menu,
+[data-geo-theme="geo-jam"] .autocomplete-results {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	box-shadow: var(--geo-shadow-glow-gold) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .dropdown-item,
+[data-geo-theme="geo-jam"] .autocomplete-item {
+	color: var(--geo-fg) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .dropdown-item:hover,
+[data-geo-theme="geo-jam"] .autocomplete-item:hover,
+[data-geo-theme="geo-jam"] .dropdown-item:focus {
+	background-color: var(--geo-navbar-bg) !important;
+	color: var(--geo-accent) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .datatable,
+[data-geo-theme="geo-jam"] .dt-cell,
+[data-geo-theme="geo-jam"] .dt-header,
+[data-geo-theme="geo-jam"] table,
+[data-geo-theme="geo-jam"] th,
+[data-geo-theme="geo-jam"] td {
+	background-color: var(--geo-bg) !important;
+	color: var(--geo-fg) !important;
+	border-color: var(--geo-border-subtle) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .dt-header .dt-cell {
+	background-color: var(--geo-navbar-bg) !important;
+	color: var(--geo-primary) !important;
+	font-family: Impact, 'Arial Black', cursive !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbar — thin, gold thumb, dark track
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+[data-geo-theme="geo-jam"] ::-webkit-scrollbar-track {
+	background: #000033;
+}
+
+[data-geo-theme="geo-jam"] ::-webkit-scrollbar-thumb {
+	background: var(--geo-primary);
+	border-radius: 4px;
+}
+
+[data-geo-theme="geo-jam"] ::-webkit-scrollbar-thumb:hover {
+	background: #ffea00;
+	box-shadow: var(--geo-shadow-glow-gold);
+}
+
+/* --------------------------------------------------------------------------
+   Frappe Page Title / Breadcrumb
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .title-text,
+[data-geo-theme="geo-jam"] .page-title .title-text {
+	color: var(--geo-primary) !important;
+	text-shadow: var(--geo-shadow-glow-gold);
+	font-family: Impact, 'Arial Black', cursive !important;
+	text-transform: uppercase;
+}
+
+[data-geo-theme="geo-jam"] .breadcrumb-item,
+[data-geo-theme="geo-jam"] .breadcrumb a {
+	color: var(--geo-fg-muted) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+/* --------------------------------------------------------------------------
+   Notifications / Toasts
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .notifications-list,
+[data-geo-theme="geo-jam"] .alert,
+[data-geo-theme="geo-jam"] .toast {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+/* --------------------------------------------------------------------------
+   Misc — ensure everything is dark
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .page-head,
+[data-geo-theme="geo-jam"] .page-head-content {
+	background-color: var(--geo-bg) !important;
+	border-bottom: 1px solid var(--geo-border-subtle) !important;
+}
+
+[data-geo-theme="geo-jam"] .widget-control,
+[data-geo-theme="geo-jam"] .widget-title {
+	color: var(--geo-primary) !important;
+	font-family: Impact, 'Arial Black', cursive !important;
+}
+
+[data-geo-theme="geo-jam"] .help-box,
+[data-geo-theme="geo-jam"] .form-group .help-box {
+	color: var(--geo-fg-muted) !important;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+}
+
+/* --------------------------------------------------------------------------
+   Starfield canvas — injected by starfield.js
+   -------------------------------------------------------------------------- */
+#geo-jam-starfield {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	pointer-events: none;
+}
