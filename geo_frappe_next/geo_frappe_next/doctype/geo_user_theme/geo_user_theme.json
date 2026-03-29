@@ -25,11 +25,11 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Theme",
-   "options": "\ngeo-light\ngeo-dark\ngeo-ocean\ngeo-sunset\ngeo-forest\ngeo-jam\ngeo-vista"
+   "options": "\ngeo-light\ngeo-dark\ngeo-ocean\ngeo-sunset\ngeo-forest\ngeo-jam\ngeo-vista\ngeo-cyberpunk"
   }
  ],
  "links": [],
- "modified": "2026-03-29 20:13:16.286295",
+ "modified": "2026-03-29 21:26:01.750224",
  "modified_by": "Administrator",
  "module": "Geo Frappe Next",
  "name": "Geo User Theme",
