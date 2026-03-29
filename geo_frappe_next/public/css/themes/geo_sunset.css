@@ -22,6 +22,22 @@
 	--geo-border: #6a3a8e;
 	--geo-border-subtle: #3a1a5e;
 	--geo-shadow-warm: 0 0 8px rgba(255, 107, 53, 0.2), 0 0 2px rgba(233, 30, 140, 0.15);
+
+	/* Override Frappe's own CSS variables */
+	--text-color: #f5e6d8;
+	--text-muted: #d4b0a0;
+	--heading-color: #ff6b35;
+	--icon-fill: #d4b0a0;
+	--icon-stroke: #d4b0a0;
+	--bg-color: #1a0a2e;
+	--card-bg: #321d56;
+	--fg-color: #321d56;
+	--border-color: #6a3a8e;
+	--dark-border-color: #7a4a9e;
+	--sidebar-bg-color: #241240;
+	--control-bg: #150820;
+	--disabled-text-color: #7a5a6a;
+	--placeholder-color: #7a4a6a;
 }
 
 /* --------------------------------------------------------------------------
@@ -377,4 +393,52 @@
 [data-geo-theme="geo-sunset"] .onboarding-slide,
 [data-geo-theme="geo-sunset"] .number-card-title {
 	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Workspace / Home page — shortcuts, cards, link items
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .workspace-shortcut-item,
+[data-geo-theme="geo-sunset"] .shortcut-widget-box .widget-head .widget-title,
+[data-geo-theme="geo-sunset"] .widget-title,
+[data-geo-theme="geo-sunset"] .workspace-section-title {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-sunset"] .link-item,
+[data-geo-theme="geo-sunset"] .link-item a,
+[data-geo-theme="geo-sunset"] .link-item .link-content,
+[data-geo-theme="geo-sunset"] .links-widget-list .link-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-sunset"] .link-item:hover,
+[data-geo-theme="geo-sunset"] .link-item a:hover {
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-sunset"] .shortcut-widget-box {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar item text — explicit color
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .standard-sidebar-item span,
+[data-geo-theme="geo-sunset"] .standard-sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-sunset"] .desk-sidebar .sidebar-item span,
+[data-geo-theme="geo-sunset"] .desk-sidebar .sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-sunset"] .sidebar-menu-item span {
+	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Shortcut count badges
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-sunset"] .shortcut-widget-box .count,
+[data-geo-theme="geo-sunset"] .workspace-shortcut-item .count {
+	color: var(--geo-fg) !important;
+	background-color: var(--geo-bg) !important;
+	border: 1px solid var(--geo-border) !important;
 }
