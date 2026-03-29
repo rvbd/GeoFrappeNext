@@ -37,7 +37,7 @@ width: 600px;
 height: 600px;
 background: radial-gradient(circle, rgba(30, 120, 220, 0.35) 0%, rgba(10, 60, 160, 0.15) 50%, transparent 70%);
 pointer-events: none;
-z-index: 0;
+z-index: -1;
 border-radius: 50%;
 }
 
@@ -50,19 +50,8 @@ width: 500px;
 height: 500px;
 background: radial-gradient(circle, rgba(0, 100, 200, 0.2) 0%, transparent 70%);
 pointer-events: none;
-z-index: 0;
+z-index: -1;
 border-radius: 50%;
-}
-
-/* --------------------------------------------------------------------------
-   Z-index layering — ensure UI sits above orb effects
-   -------------------------------------------------------------------------- */
-[data-geo-theme="geo-vista"] .navbar,
-[data-geo-theme="geo-vista"] .layout-side-section,
-[data-geo-theme="geo-vista"] .layout-main-section,
-[data-geo-theme="geo-vista"] .page-head {
-position: relative;
-z-index: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -166,6 +155,16 @@ color: var(--geo-fg) !important;
 [data-geo-theme="geo-vista"] .standard-sidebar-item:hover {
 background-color: rgba(61, 174, 255, 0.12);
 color: var(--geo-fg);
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar text — explicit default color for legibility
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] .sidebar-item,
+[data-geo-theme="geo-vista"] .standard-sidebar-item,
+[data-geo-theme="geo-vista"] .sidebar-item a,
+[data-geo-theme="geo-vista"] .standard-sidebar-item a {
+color: #c8e0ff !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -423,4 +422,41 @@ color: var(--geo-fg) !important;
 [data-geo-theme="geo-vista"] .help-box,
 [data-geo-theme="geo-vista"] .form-group .help-box {
 color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Widget / Card links — ensure legible color against dark glass backgrounds
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] .widget a,
+[data-geo-theme="geo-vista"] .frappe-card a,
+[data-geo-theme="geo-vista"] .section-body a {
+color: #a8d8ff !important;
+}
+
+[data-geo-theme="geo-vista"] .widget a:hover,
+[data-geo-theme="geo-vista"] .frappe-card a:hover,
+[data-geo-theme="geo-vista"] .section-body a:hover {
+color: #40ccff !important;
+text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Widget section headings — high contrast text
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] .widget .widget-head,
+[data-geo-theme="geo-vista"] .widget .widget-title,
+[data-geo-theme="geo-vista"] .section-head,
+[data-geo-theme="geo-vista"] .section-title {
+color: var(--geo-fg) !important;
+text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   Shortcut buttons — ensure legible text
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] .shortcut-widget-box,
+[data-geo-theme="geo-vista"] .shortcut-widget-box .widget-title,
+[data-geo-theme="geo-vista"] .shortcut-widget-box a {
+color: var(--geo-fg) !important;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
