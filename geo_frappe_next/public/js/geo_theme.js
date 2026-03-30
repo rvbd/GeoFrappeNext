@@ -55,8 +55,26 @@
 		stopStarfield();
 
 		if (!themeValue || themeValue === "default") {
-			// Restore Frappe default
-			html.removeAttribute("data-theme-mode");
+			// Restore Frappe's own light/dark preference
+			var frappeTheme = "light"; // sensible default
+			try {
+				var systemTheme = localStorage.getItem("system_theme");
+				if (systemTheme === "dark") frappeTheme = "dark";
+			} catch (e) { console.warn("Geo Theme: failed to read system_theme from localStorage", e); }
+			// Also honour frappe.boot.user_info.theme if available
+			if (
+				typeof frappe !== "undefined" &&
+				frappe.boot &&
+				frappe.boot.user_info &&
+				frappe.boot.user_info.theme
+			) {
+				frappeTheme = frappe.boot.user_info.theme === "dark" ? "dark" : "light";
+			}
+			if (frappeTheme === "dark") {
+				html.setAttribute("data-theme-mode", "dark");
+			} else {
+				html.removeAttribute("data-theme-mode");
+			}
 			return;
 		}
 
@@ -104,7 +122,7 @@
 
 	function loadTheme() {
 		// 1. Try frappe.boot (synchronous, injected server-side — fastest, no flicker)
-		if (typeof frappe !== "undefined" && frappe.boot && frappe.boot.geo_theme) {
+		if (typeof frappe !== "undefined" && frappe.boot && frappe.boot.hasOwnProperty("geo_theme")) {
 			applyTheme(frappe.boot.geo_theme);
 			// Keep localStorage in sync
 			try { localStorage.setItem(STORAGE_KEY, frappe.boot.geo_theme); } catch(e) { console.warn("Geo Theme: failed to sync to localStorage", e); }
@@ -113,7 +131,7 @@
 
 		// 2. Fall back to localStorage for immediate paint
 		var stored = localStorage.getItem(STORAGE_KEY);
-		if (stored) {
+		if (stored !== null) {
 			applyTheme(stored);
 			return;
 		}
@@ -162,7 +180,7 @@
 
 		var defaultOpt = document.createElement("option");
 		defaultOpt.value = "";
-		defaultOpt.textContent = "— Frappe Default —";
+		defaultOpt.textContent = "— Frappe Default (Light/Dark) —";
 		select.appendChild(defaultOpt);
 
 		GEO_THEMES.forEach(function (t) {
