@@ -571,21 +571,27 @@
    Child Table Row Edit — themed overlay and elevated form panel
    -------------------------------------------------------------------------- */
 
-/* The dimmer that Frappe renders behind the open row */
-[data-geo-theme="geo-sunset"] .rows-dimmer,
-[data-geo-theme="geo-sunset"] .grid-body .rows-dimmer {
-	background-color: rgba(0, 0, 0, 0.45) !important;
+/* Style the #freeze backdrop itself (the real Frappe overlay for grid-form) */
+[data-geo-theme="geo-sunset"] #freeze.grid-form,
+[data-geo-theme="geo-sunset"] #freeze.dark.grid-form {
+	background-color: rgba(10, 0, 20, 0.60) !important;
 	backdrop-filter: blur(4px) !important;
 	-webkit-backdrop-filter: blur(4px) !important;
 	opacity: 1 !important;
 }
 
-/* Elevate the open row's form above the dimmer */
-[data-geo-theme="geo-sunset"] .grid-row-open .form-grid-wrapper,
-[data-geo-theme="geo-sunset"] .grid-row-open .grid-form-row {
-	position: relative;
-	z-index: 2;
-	background-color: rgba(50, 29, 86, 0.92) !important;
+/* Hide the freeze message container inside it (no loading text needed) */
+[data-geo-theme="geo-sunset"] #freeze.grid-form .freeze-message-container,
+[data-geo-theme="geo-sunset"] #freeze .freeze-message-container {
+	background-color: transparent !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+/* The editing form panel — themed background elevated above the backdrop */
+[data-geo-theme="geo-sunset"] .form-in-grid {
+	background-color: rgba(50, 29, 86, 0.97) !important;
+	border: 1px solid var(--geo-border) !important;
 }
 
 /* The grid body itself should not have a background that bleeds through */
@@ -602,7 +608,7 @@
 	background-color: var(--geo-bg-subtle) !important;
 }
 
-/* Modal backdrop (used by some Frappe versions for child table) */
+/* Modal backdrop fallback (used by some Frappe versions for child table) */
 [data-geo-theme="geo-sunset"] .modal-backdrop,
 [data-geo-theme="geo-sunset"] .modal-backdrop.fade,
 [data-geo-theme="geo-sunset"] .modal-backdrop.show {
@@ -612,9 +618,28 @@
 	opacity: 1 !important;
 }
 
-/* Frappe #freeze overlay reused as grid-form backdrop — make container transparent */
-[data-geo-theme="geo-sunset"] #freeze.grid-form .freeze-message-container,
-[data-geo-theme="geo-sunset"] #freeze .freeze-message-container {
-	background-color: transparent !important;
-	background: transparent !important;
+/* The dimmer fallback (legacy Frappe versions) */
+[data-geo-theme="geo-sunset"] .rows-dimmer,
+[data-geo-theme="geo-sunset"] .grid-body .rows-dimmer {
+	background-color: rgba(0, 0, 0, 0.45) !important;
+	backdrop-filter: blur(4px) !important;
+	-webkit-backdrop-filter: blur(4px) !important;
+	opacity: 1 !important;
+}
+
+/* Elevate the open row's form above the dimmer (legacy fallback) */
+[data-geo-theme="geo-sunset"] .grid-row-open .form-grid-wrapper,
+[data-geo-theme="geo-sunset"] .grid-row-open .grid-form-row {
+	position: relative;
+	z-index: 2;
+	background-color: rgba(50, 29, 86, 0.97) !important;
+}
+
+/* Child table / data grid — semi-transparent themed background */
+[data-geo-theme="geo-sunset"] .form-grid-container,
+[data-geo-theme="geo-sunset"] .grid-footer,
+[data-geo-theme="geo-sunset"] .frappe-control[data-fieldtype="Table"] .form-grid {
+	background-color: rgba(50, 29, 86, 0.6) !important;
+	border: 1px solid var(--geo-border) !important;
+	border-radius: 4px !important;
 }
