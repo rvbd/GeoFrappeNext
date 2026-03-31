@@ -568,40 +568,42 @@
 }
 
 /* --------------------------------------------------------------------------
-   Grid Row Edit — Dark blurred overlay (replaces jarring white backdrop)
+   Grid / Child Table — Row edit overlay
    -------------------------------------------------------------------------- */
-[data-geo-theme="geo-sunset"] .grid-row.in-view::before,
-[data-geo-theme="geo-sunset"] .grid-row-open::before,
-[data-geo-theme="geo-sunset"] .data-grid::before {
-	content: '';
-	position: fixed;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.55);
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(6px);
-	z-index: 1;
-	pointer-events: none;
+
+/* The dimmer that Frappe overlays on non-active rows during row editing */
+[data-geo-theme="geo-sunset"] .rows-dimmer {
+	background-color: rgba(0, 0, 0, 0.45) !important;
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
+	opacity: 1 !important;
+}
+
+/* Ensure the open row's form sits on top with proper background */
+[data-geo-theme="geo-sunset"] .grid-row-open .grid-form-row,
+[data-geo-theme="geo-sunset"] .grid-row-open .form-grid-wrapper {
+	background-color: var(--geo-bg-subtle) !important;
+	position: relative;
+	z-index: 10;
+}
+
+/* The grid body itself should not have a background that bleeds through */
+[data-geo-theme="geo-sunset"] .form-grid {
+	background-color: var(--geo-bg) !important;
+}
+
+/* Grid rows — ensure they don't get transparent background that shows the dimmer wrong */
+[data-geo-theme="geo-sunset"] .grid-row {
+	background-color: var(--geo-bg) !important;
+}
+
+[data-geo-theme="geo-sunset"] .grid-row:hover {
+	background-color: var(--geo-bg-subtle) !important;
 }
 
 [data-geo-theme="geo-sunset"] .modal-backdrop,
 [data-geo-theme="geo-sunset"] .modal-backdrop.fade,
 [data-geo-theme="geo-sunset"] .modal-backdrop.show {
-	background-color: rgba(0, 0, 0, 0.55) !important;
-	backdrop-filter: blur(6px) !important;
-	-webkit-backdrop-filter: blur(6px) !important;
+	background-color: rgba(0, 0, 0, 0.6) !important;
 	opacity: 1 !important;
-}
-
-[data-geo-theme="geo-sunset"] .grid-row-open .form-grid-wrapper,
-[data-geo-theme="geo-sunset"] .grid-row-open .grid-form-row {
-	position: relative;
-	z-index: 2;
-	background-color: var(--geo-bg-subtle) !important;
-}
-
-[data-geo-theme="geo-sunset"] .rows-dimmer,
-[data-geo-theme="geo-sunset"] .grid-body .rows-dimmer {
-	background: rgba(0, 0, 0, 0.55) !important;
-	backdrop-filter: blur(6px) !important;
-	-webkit-backdrop-filter: blur(6px) !important;
 }
