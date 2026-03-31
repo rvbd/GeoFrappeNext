@@ -421,3 +421,36 @@
     background: transparent !important;
 }
 
+
+/* --------------------------------------------------------------------------
+   Grid Row Edit — Dark blurred overlay (replaces jarring white backdrop)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-jam"] .grid-row.in-view::before,
+[data-geo-theme="geo-jam"] .grid-row-open::before,
+[data-geo-theme="geo-jam"] .data-grid::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+	z-index: 1;
+	pointer-events: none;
+}
+
+[data-geo-theme="geo-jam"] .modal-backdrop,
+[data-geo-theme="geo-jam"] .modal-backdrop.fade,
+[data-geo-theme="geo-jam"] .modal-backdrop.show {
+	background-color: rgba(0, 0, 0, 0.55) !important;
+	opacity: 1 !important;
+}
+
+[data-geo-theme="geo-jam"] .grid-row-open .form-grid-wrapper,
+[data-geo-theme="geo-jam"] .grid-row-open .grid-form-row {
+	position: relative;
+	z-index: 2;
+	background-color: var(--geo-bg-subtle) !important;
+}
+
+[data-geo-theme="geo-jam"] .rows-dimmer,
+[data-geo-theme="geo-jam"] .grid-body .rows-dimmer {
+	background: rgba(0, 0, 0, 0.55) !important;
+}

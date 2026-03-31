@@ -493,3 +493,42 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   fill: var(--geo-fg) !important;
   background-color: transparent !important;
 }
+
+/* --------------------------------------------------------------------------
+   Grid Row Edit — Dark blurred overlay (replaces jarring white backdrop)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-vista"] .grid-row.in-view::before,
+[data-geo-theme="geo-vista"] .grid-row-open::before,
+[data-geo-theme="geo-vista"] .data-grid::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+[data-geo-theme="geo-vista"] .modal-backdrop,
+[data-geo-theme="geo-vista"] .modal-backdrop.fade,
+[data-geo-theme="geo-vista"] .modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  opacity: 1 !important;
+}
+
+[data-geo-theme="geo-vista"] .grid-row-open .form-grid-wrapper,
+[data-geo-theme="geo-vista"] .grid-row-open .grid-form-row {
+  position: relative;
+  z-index: 2;
+  background-color: var(--geo-bg-subtle) !important;
+}
+
+[data-geo-theme="geo-vista"] .rows-dimmer,
+[data-geo-theme="geo-vista"] .grid-body .rows-dimmer {
+  background: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+}
