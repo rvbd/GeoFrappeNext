@@ -577,3 +577,42 @@
 [data-geo-theme="geo-forest"] .sidebar-menu-item span {
 	color: var(--geo-fg) !important;
 }
+
+/* --------------------------------------------------------------------------
+   Grid Row Edit — Dark blurred overlay (replaces jarring white backdrop)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-forest"] .grid-row.in-view::before,
+[data-geo-theme="geo-forest"] .grid-row-open::before,
+[data-geo-theme="geo-forest"] .data-grid::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	z-index: 1;
+	pointer-events: none;
+}
+
+[data-geo-theme="geo-forest"] .modal-backdrop,
+[data-geo-theme="geo-forest"] .modal-backdrop.fade,
+[data-geo-theme="geo-forest"] .modal-backdrop.show {
+	background-color: rgba(0, 0, 0, 0.55) !important;
+	backdrop-filter: blur(6px) !important;
+	-webkit-backdrop-filter: blur(6px) !important;
+	opacity: 1 !important;
+}
+
+[data-geo-theme="geo-forest"] .grid-row-open .form-grid-wrapper,
+[data-geo-theme="geo-forest"] .grid-row-open .grid-form-row {
+	position: relative;
+	z-index: 2;
+	background-color: var(--geo-bg-subtle) !important;
+}
+
+[data-geo-theme="geo-forest"] .rows-dimmer,
+[data-geo-theme="geo-forest"] .grid-body .rows-dimmer {
+	background: rgba(0, 0, 0, 0.55) !important;
+	backdrop-filter: blur(6px) !important;
+	-webkit-backdrop-filter: blur(6px) !important;
+}

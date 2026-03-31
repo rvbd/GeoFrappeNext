@@ -363,3 +363,42 @@
 [data-geo-theme="geo-ocean"] .form-group .help-box {
 	color: var(--geo-fg-muted) !important;
 }
+
+/* --------------------------------------------------------------------------
+   Grid Row Edit — Dark blurred overlay (replaces jarring white backdrop)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-ocean"] .grid-row.in-view::before,
+[data-geo-theme="geo-ocean"] .grid-row-open::before,
+[data-geo-theme="geo-ocean"] .data-grid::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	z-index: 1;
+	pointer-events: none;
+}
+
+[data-geo-theme="geo-ocean"] .modal-backdrop,
+[data-geo-theme="geo-ocean"] .modal-backdrop.fade,
+[data-geo-theme="geo-ocean"] .modal-backdrop.show {
+	background-color: rgba(0, 0, 0, 0.55) !important;
+	backdrop-filter: blur(6px) !important;
+	-webkit-backdrop-filter: blur(6px) !important;
+	opacity: 1 !important;
+}
+
+[data-geo-theme="geo-ocean"] .grid-row-open .form-grid-wrapper,
+[data-geo-theme="geo-ocean"] .grid-row-open .grid-form-row {
+	position: relative;
+	z-index: 2;
+	background-color: var(--geo-bg-subtle) !important;
+}
+
+[data-geo-theme="geo-ocean"] .rows-dimmer,
+[data-geo-theme="geo-ocean"] .grid-body .rows-dimmer {
+	background: rgba(0, 0, 0, 0.55) !important;
+	backdrop-filter: blur(6px) !important;
+	-webkit-backdrop-filter: blur(6px) !important;
+}
