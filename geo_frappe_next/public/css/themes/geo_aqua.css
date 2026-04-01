@@ -525,3 +525,312 @@
 [data-geo-theme="geo-aqua"] .form-group .help-box {
 	color: var(--geo-fg-muted) !important;
 }
+
+/* --------------------------------------------------------------------------
+   Navbar — icon buttons (transparent bg, Aqua blue hover tint)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .navbar .btn,
+[data-geo-theme="geo-aqua"] .navbar .btn-icon,
+[data-geo-theme="geo-aqua"] .navbar button,
+[data-geo-theme="geo-aqua"] .navbar .nav-item .btn,
+[data-geo-theme="geo-aqua"] .navbar .nav-item button,
+[data-geo-theme="geo-aqua"] .navbar .notifications-icon,
+[data-geo-theme="geo-aqua"] .navbar .help-btn {
+	background-color: transparent !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+}
+
+[data-geo-theme="geo-aqua"] .navbar .btn:hover,
+[data-geo-theme="geo-aqua"] .navbar .btn-icon:hover,
+[data-geo-theme="geo-aqua"] .navbar button:hover,
+[data-geo-theme="geo-aqua"] .navbar .nav-item .btn:hover,
+[data-geo-theme="geo-aqua"] .navbar .nav-item button:hover {
+	background-color: rgba(10, 126, 228, 0.12) !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+}
+
+[data-geo-theme="geo-aqua"] .navbar svg,
+[data-geo-theme="geo-aqua"] .navbar .icon,
+[data-geo-theme="geo-aqua"] .navbar use {
+	color: var(--geo-fg) !important;
+	fill: var(--geo-fg) !important;
+	background-color: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+   Home page — workspace module cards, shortcuts, inner text
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .workspace-shortcut,
+[data-geo-theme="geo-aqua"] .workspace-shortcut-item,
+[data-geo-theme="geo-aqua"] .shortcut-widget-box,
+[data-geo-theme="geo-aqua"] .shortcut-widget-box .widget-title,
+[data-geo-theme="geo-aqua"] .widget-body,
+[data-geo-theme="geo-aqua"] .widget-body p,
+[data-geo-theme="geo-aqua"] .widget-body span,
+[data-geo-theme="geo-aqua"] .widget-head,
+[data-geo-theme="geo-aqua"] .widget-head .widget-title,
+[data-geo-theme="geo-aqua"] .widget-title,
+[data-geo-theme="geo-aqua"] .workspace-section-title,
+[data-geo-theme="geo-aqua"] .module-links .btn-link,
+[data-geo-theme="geo-aqua"] .module-links a,
+[data-geo-theme="geo-aqua"] .shortcuts .btn-link,
+[data-geo-theme="geo-aqua"] .shortcuts a,
+[data-geo-theme="geo-aqua"] .onboarding-slide,
+[data-geo-theme="geo-aqua"] .number-card-title,
+[data-geo-theme="geo-aqua"] .links-widget-list,
+[data-geo-theme="geo-aqua"] .links-widget-list .document-link,
+[data-geo-theme="geo-aqua"] .links-widget-list .document-link .document-link-badge,
+[data-geo-theme="geo-aqua"] .links-widget-list a,
+[data-geo-theme="geo-aqua"] .links-widget-list span,
+[data-geo-theme="geo-aqua"] .widget-group .widget,
+[data-geo-theme="geo-aqua"] .widget-group .widget *,
+[data-geo-theme="geo-aqua"] .frappe-card *:not(.btn-primary):not(.btn-danger):not(.indicator-pill) {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .link-item,
+[data-geo-theme="geo-aqua"] .link-item a,
+[data-geo-theme="geo-aqua"] .link-item .link-content,
+[data-geo-theme="geo-aqua"] .links-widget-list .link-item {
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .link-item:hover,
+[data-geo-theme="geo-aqua"] .link-item a:hover {
+	color: var(--geo-primary) !important;
+}
+
+/* Widget / section titles — Aqua primary blue */
+[data-geo-theme="geo-aqua"] .widget-group-title,
+[data-geo-theme="geo-aqua"] .widget-group .widget .widget-head .widget-title,
+[data-geo-theme="geo-aqua"] .links-widget-list .link-item .link-label {
+	color: var(--geo-primary) !important;
+}
+
+/* Document link badge counts */
+[data-geo-theme="geo-aqua"] .document-link-badge .count,
+[data-geo-theme="geo-aqua"] .shortcut-widget-box .badge {
+	background-color: var(--geo-primary) !important;
+	color: #ffffff !important;
+}
+
+/* Shortcut count badges */
+[data-geo-theme="geo-aqua"] .shortcut-widget-box .count,
+[data-geo-theme="geo-aqua"] .workspace-shortcut-item .count {
+	color: var(--geo-fg) !important;
+	background-color: #d4e9ff !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar item text — explicit color
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .standard-sidebar-item span,
+[data-geo-theme="geo-aqua"] .standard-sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-aqua"] .desk-sidebar .sidebar-item span,
+[data-geo-theme="geo-aqua"] .desk-sidebar .sidebar-item .sidebar-item-label,
+[data-geo-theme="geo-aqua"] .sidebar-menu-item span {
+	color: var(--geo-fg) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Connection / Doctype pill buttons (Aqua gel lozenge)
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .document-link-badge,
+[data-geo-theme="geo-aqua"] .document-link .btn,
+[data-geo-theme="geo-aqua"] .connections-section .btn,
+[data-geo-theme="geo-aqua"] .btn-link-to-form {
+	border-radius: 20px !important;
+	background: linear-gradient(180deg, #5aadff 0%, #0a7ee4 50%, #0060b8 100%) !important;
+	color: #ffffff !important;
+	border: 1px solid #0060b8 !important;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+	padding: 2px 12px !important;
+}
+
+[data-geo-theme="geo-aqua"] .document-link-badge:hover,
+[data-geo-theme="geo-aqua"] .document-link .btn:hover,
+[data-geo-theme="geo-aqua"] .connections-section .btn:hover,
+[data-geo-theme="geo-aqua"] .btn-link-to-form:hover {
+	background: linear-gradient(180deg, #76bfff 0%, #1a8ff5 50%, #0070cc 100%) !important;
+	box-shadow: 0 2px 8px rgba(10, 126, 228, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-geo-theme="geo-aqua"] .document-link .btn-new,
+[data-geo-theme="geo-aqua"] .connections-section .btn-new,
+[data-geo-theme="geo-aqua"] .document-link .add-new-row {
+	border-radius: 50% !important;
+	background: linear-gradient(180deg, #5aadff 0%, #0a7ee4 50%, #0060b8 100%) !important;
+	color: #ffffff !important;
+	border: 1px solid #0060b8 !important;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-geo-theme="geo-aqua"] .document-link .btn-new:hover,
+[data-geo-theme="geo-aqua"] .connections-section .btn-new:hover,
+[data-geo-theme="geo-aqua"] .document-link .add-new-row:hover {
+	background: linear-gradient(180deg, #76bfff 0%, #1a8ff5 50%, #0070cc 100%) !important;
+	box-shadow: 0 2px 8px rgba(10, 126, 228, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Child Table Row Edit — themed overlay and elevated form panel
+   -------------------------------------------------------------------------- */
+
+/* Style the #freeze backdrop itself (the real Frappe overlay for grid-form) */
+[data-geo-theme="geo-aqua"] #freeze.grid-form,
+[data-geo-theme="geo-aqua"] #freeze.dark.grid-form {
+	background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Hide the freeze message container inside it (no loading text needed) */
+[data-geo-theme="geo-aqua"] #freeze.grid-form .freeze-message-container,
+[data-geo-theme="geo-aqua"] #freeze .freeze-message-container {
+	background-color: transparent !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+/* The editing form panel — white background elevated above the backdrop */
+[data-geo-theme="geo-aqua"] .form-in-grid {
+	background-color: #ffffff !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+/* The grid body itself */
+[data-geo-theme="geo-aqua"] .form-grid {
+	background-color: var(--geo-bg) !important;
+}
+
+/* Grid rows */
+[data-geo-theme="geo-aqua"] .grid-row {
+	background-color: var(--geo-bg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .grid-row:hover {
+	background-color: var(--geo-bg-subtle) !important;
+}
+
+/* Modal backdrop fallback */
+[data-geo-theme="geo-aqua"] .modal-backdrop,
+[data-geo-theme="geo-aqua"] .modal-backdrop.fade,
+[data-geo-theme="geo-aqua"] .modal-backdrop.show {
+	background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* The dimmer fallback (legacy Frappe versions) */
+[data-geo-theme="geo-aqua"] .rows-dimmer,
+[data-geo-theme="geo-aqua"] .grid-body .rows-dimmer {
+	background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Elevate the open row's form above the dimmer */
+[data-geo-theme="geo-aqua"] .grid-row-open .form-grid-wrapper,
+[data-geo-theme="geo-aqua"] .grid-row-open .grid-form-row {
+	position: relative;
+	z-index: 2;
+	background-color: #ffffff !important;
+}
+
+/* Child table / data grid — light themed background */
+[data-geo-theme="geo-aqua"] .form-grid-container,
+[data-geo-theme="geo-aqua"] .grid-footer,
+[data-geo-theme="geo-aqua"] [data-fieldtype="Table"] .form-grid {
+	background-color: var(--geo-bg-subtle) !important;
+	border: 1px solid var(--geo-border) !important;
+	border-radius: 4px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Comments & Activity section
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .comment-box,
+[data-geo-theme="geo-aqua"] .comment-input-wrapper,
+[data-geo-theme="geo-aqua"] .frappe-comment,
+[data-geo-theme="geo-aqua"] .timeline-content,
+[data-geo-theme="geo-aqua"] .timeline-item,
+[data-geo-theme="geo-aqua"] .activity-timeline,
+[data-geo-theme="geo-aqua"] .form-timeline,
+[data-geo-theme="geo-aqua"] .timeline,
+[data-geo-theme="geo-aqua"] .new-timeline {
+	background-color: #ffffff !important;
+	border: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .comment-input,
+[data-geo-theme="geo-aqua"] .comment-box textarea,
+[data-geo-theme="geo-aqua"] .comment-input-wrapper textarea {
+	background-color: #ffffff !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-aqua"] .activity-title,
+[data-geo-theme="geo-aqua"] .activity-header {
+	background-color: var(--geo-bg-subtle) !important;
+	color: var(--geo-fg) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* Action buttons inside comment box — silver gel style */
+[data-geo-theme="geo-aqua"] .comment-box .btn[data-action="new_email"],
+[data-geo-theme="geo-aqua"] .comment-box .btn[data-action="new_event"],
+[data-geo-theme="geo-aqua"] .form-timeline .btn-new-email,
+[data-geo-theme="geo-aqua"] .form-timeline .btn-new-event {
+	background: linear-gradient(180deg, #f8f8f8 0%, #d8d8d8 50%, #c0c0c0 100%) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid #a0a8b4 !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+	border-radius: 4px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Page head (form toolbar) — actions & breadcrumb area
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .page-head .page-actions .btn {
+	background: linear-gradient(180deg, #f8f8f8 0%, #d8d8d8 50%, #c0c0c0 100%) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid #a0a8b4 !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+	border-radius: 12px !important;
+}
+
+[data-geo-theme="geo-aqua"] .page-head .page-actions .btn-primary {
+	background: linear-gradient(180deg, #5aadff 0%, #0a7ee4 50%, #0060b8 100%) !important;
+	color: #ffffff !important;
+	border: 1px solid #0060b8 !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 4px rgba(0, 96, 184, 0.4) !important;
+}
+
+[data-geo-theme="geo-aqua"] .page-head .breadcrumb-area {
+	background: transparent !important;
+	color: var(--geo-fg-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Form layout details
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .form-section .section-head {
+	background-color: var(--geo-bg-subtle) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .frappe-control label,
+[data-geo-theme="geo-aqua"] .control-label {
+	color: var(--geo-fg) !important;
+	font-family: 'Lucida Grande', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+[data-geo-theme="geo-aqua"] .like-disabled-input,
+[data-geo-theme="geo-aqua"] .read-only-value {
+	background-color: #f5f5f5 !important;
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .mandatory-section {
+	border-left: 3px solid var(--geo-primary) !important;
+}
