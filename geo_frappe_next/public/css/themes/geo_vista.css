@@ -561,3 +561,88 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   border: 1px solid var(--geo-border) !important;
   border-radius: 4px !important;
 }
+
+/* --- Connection / Doctype Pill Buttons (Vista Aero Gloss) --- */
+[data-geo-theme="geo-vista"] .document-link-badge,
+[data-geo-theme="geo-vista"] .document-link .btn,
+[data-geo-theme="geo-vista"] .connections-section .btn,
+[data-geo-theme="geo-vista"] .btn-link-to-form {
+  border-radius: 20px !important;
+  background: linear-gradient(180deg, rgba(100, 180, 255, 0.55) 0%, rgba(30, 100, 220, 0.85) 49%, rgba(10, 60, 180, 0.92) 51%, rgba(5, 40, 140, 0.97) 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(150, 200, 255, 0.5) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  padding: 2px 12px !important;
+}
+
+[data-geo-theme="geo-vista"] .document-link-badge:hover,
+[data-geo-theme="geo-vista"] .document-link .btn:hover,
+[data-geo-theme="geo-vista"] .connections-section .btn:hover,
+[data-geo-theme="geo-vista"] .btn-link-to-form:hover {
+  background: linear-gradient(180deg, rgba(130, 200, 255, 0.65) 0%, rgba(50, 130, 240, 0.92) 49%, rgba(20, 80, 200, 0.97) 51%, rgba(10, 55, 160, 1) 100%) !important;
+  box-shadow: 0 2px 10px rgba(61, 174, 255, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+}
+
+[data-geo-theme="geo-vista"] .document-link .btn-new,
+[data-geo-theme="geo-vista"] .connections-section .btn-new,
+[data-geo-theme="geo-vista"] .document-link .add-new-row {
+  border-radius: 50% !important;
+  background: linear-gradient(180deg, rgba(100, 180, 255, 0.55) 0%, rgba(30, 100, 220, 0.85) 49%, rgba(10, 60, 180, 0.92) 51%, rgba(5, 40, 140, 0.97) 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(150, 200, 255, 0.5) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+}
+
+[data-geo-theme="geo-vista"] .document-link .btn-new:hover,
+[data-geo-theme="geo-vista"] .connections-section .btn-new:hover,
+[data-geo-theme="geo-vista"] .document-link .add-new-row:hover {
+  background: linear-gradient(180deg, rgba(130, 200, 255, 0.65) 0%, rgba(50, 130, 240, 0.92) 49%, rgba(20, 80, 200, 0.97) 51%, rgba(10, 55, 160, 1) 100%) !important;
+  box-shadow: 0 2px 10px rgba(61, 174, 255, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+}
+
+/* --- Comments & Activity Section (Glassy Navy) --- */
+[data-geo-theme="geo-vista"] .comment-box,
+[data-geo-theme="geo-vista"] .comment-input-wrapper,
+[data-geo-theme="geo-vista"] .frappe-comment,
+[data-geo-theme="geo-vista"] .timeline-content,
+[data-geo-theme="geo-vista"] .timeline-item,
+[data-geo-theme="geo-vista"] .activity-timeline,
+[data-geo-theme="geo-vista"] .form-timeline,
+[data-geo-theme="geo-vista"] .timeline,
+[data-geo-theme="geo-vista"] .new-timeline {
+  background-color: rgba(5, 25, 65, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid var(--geo-border) !important;
+  color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-vista"] .comment-input,
+[data-geo-theme="geo-vista"] .comment-box textarea,
+[data-geo-theme="geo-vista"] .comment-input-wrapper textarea {
+  background-color: rgba(10, 40, 90, 0.7) !important;
+  color: var(--geo-fg) !important;
+  border: 1px solid var(--geo-border) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+[data-geo-theme="geo-vista"] .activity-title,
+[data-geo-theme="geo-vista"] .activity-header {
+  background-color: rgba(5, 25, 65, 0.85) !important;
+  color: var(--geo-fg) !important;
+  border-bottom: 1px solid var(--geo-border) !important;
+}
+
+[data-geo-theme="geo-vista"] .comment-box .btn[data-action="new_email"],
+[data-geo-theme="geo-vista"] .comment-box .btn[data-action="new_event"],
+[data-geo-theme="geo-vista"] .form-timeline .btn-new-email,
+[data-geo-theme="geo-vista"] .form-timeline .btn-new-event {
+  background: rgba(10, 40, 90, 0.7) !important;
+  color: var(--geo-fg) !important;
+  border: 1px solid var(--geo-border) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-radius: 4px !important;
+}
