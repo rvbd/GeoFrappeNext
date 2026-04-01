@@ -20,6 +20,14 @@
 	--geo-danger: #cc0000;
 	--geo-border: #c0c8d4;
 	--geo-border-subtle: #dde3ea;
+	--geo-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+	--geo-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.22);
+	--geo-shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+	--geo-aqua-gel-blue: linear-gradient(180deg, #a8d8ff 0%, #5aadff 35%, #0a7ee4 65%, #0060b8 100%);
+	--geo-aqua-gel-silver: linear-gradient(180deg, #ffffff 0%, #e8e8e8 40%, #c8c8c8 60%, #b8b8b8 100%);
+	--geo-aqua-gel-graphite: linear-gradient(180deg, #c0c0c8 0%, #909098 40%, #606068 60%, #484850 100%);
+	--geo-metal-bg: linear-gradient(180deg, #f5f5f5 0%, #e0e0e0 40%, #d0d0d0 60%, #c8c8c8 100%);
+	--geo-pinstripe: repeating-linear-gradient(180deg, #e8edf2 0px, #e8edf2 1px, #edf1f5 1px, #edf1f5 2px);
 }
 
 /* --------------------------------------------------------------------------
@@ -80,9 +88,32 @@
 [data-geo-theme="geo-aqua"] .navbar,
 [data-geo-theme="geo-aqua"] .navbar-home,
 [data-geo-theme="geo-aqua"] header.navbar {
-	background: linear-gradient(180deg, #f0f0f0, #d0d0d0) !important;
+	background: linear-gradient(180deg,
+		#f8f8f8 0%,
+		#efefef 15%,
+		#e0e0e0 50%,
+		#cecece 85%,
+		#c4c4c4 100%
+	) !important;
 	border-bottom: 1px solid #a0a8b4 !important;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 2px 4px rgba(0, 0, 0, 0.18) !important;
+}
+
+[data-geo-theme="geo-aqua"] .navbar .form-control,
+[data-geo-theme="geo-aqua"] .navbar input[type="search"],
+[data-geo-theme="geo-aqua"] .navbar input[type="text"] {
+	background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 40%, #c8c8c8 60%, #b8b8b8 100%) !important;
+	border: 1px solid #a0a8b4 !important;
+	border-radius: 10px !important;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .navbar-toggler {
+	background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 40%, #c8c8c8 60%, #b8b8b8 100%) !important;
+	border: 1px solid #a0a8b4 !important;
+	border-radius: 6px !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0, 0, 0, 0.2) !important;
 }
 
 [data-geo-theme="geo-aqua"] .navbar .nav-link,
@@ -226,8 +257,8 @@
 [data-geo-theme="geo-aqua"] .widget {
 	background-color: var(--geo-bg) !important;
 	border: 1px solid var(--geo-border) !important;
-	border-radius: 8px !important;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10) !important;
+	border-radius: 10px !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
 }
 
 [data-geo-theme="geo-aqua"] .layout-main,
@@ -246,11 +277,17 @@
 	color: var(--geo-primary-fg) !important;
 	border: 1px solid #0060b8 !important;
 	border-radius: 12px !important;
+	transition: all 0.1s ease !important;
 }
 
 [data-geo-theme="geo-aqua"] .btn-primary:hover {
 	background: linear-gradient(180deg, #76bfff 0%, #1a8ff5 50%, #0070cc 100%) !important;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 3px 6px rgba(0, 96, 184, 0.5) !important;
+}
+
+[data-geo-theme="geo-aqua"] .btn-primary:active {
+	background: linear-gradient(180deg, #0060b8 0%, #0a7ee4 50%, #5aadff 100%) !important;
+	box-shadow: inset 0 2px 4px rgba(0, 60, 120, 0.4) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -264,6 +301,7 @@
 	color: var(--geo-fg) !important;
 	border: 1px solid #a0a8b4 !important;
 	border-radius: 12px !important;
+	transition: all 0.1s ease !important;
 }
 
 [data-geo-theme="geo-aqua"] .btn-secondary:hover,
@@ -272,10 +310,50 @@
 	background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 50%, #d0d0d0 100%) !important;
 }
 
+[data-geo-theme="geo-aqua"] .btn-secondary:active,
+[data-geo-theme="geo-aqua"] button.btn-default:active,
+[data-geo-theme="geo-aqua"] .btn-default:active {
+	background: linear-gradient(180deg, #b8b8b8 0%, #d0d0d0 50%, #e8e8e8 100%) !important;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
 [data-geo-theme="geo-aqua"] .btn-danger {
-	background-color: var(--geo-danger) !important;
-	border-color: var(--geo-danger) !important;
+	background: linear-gradient(180deg, #ff6666 0%, #cc0000 50%, #990000 100%) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 4px rgba(150, 0, 0, 0.3) !important;
+	border: 1px solid #880000 !important;
 	border-radius: 12px !important;
+	color: #ffffff !important;
+	transition: all 0.1s ease !important;
+}
+
+[data-geo-theme="geo-aqua"] .btn-danger:hover {
+	background: linear-gradient(180deg, #ff8080 0%, #e00000 50%, #aa0000 100%) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 3px 6px rgba(150, 0, 0, 0.4) !important;
+}
+
+[data-geo-theme="geo-aqua"] .btn-danger:active {
+	background: linear-gradient(180deg, #880000 0%, #aa0000 50%, #cc0000 100%) !important;
+	box-shadow: inset 0 2px 4px rgba(80, 0, 0, 0.4) !important;
+}
+
+[data-geo-theme="geo-aqua"] .btn-white,
+[data-geo-theme="geo-aqua"] .btn-outline-primary,
+[data-geo-theme="geo-aqua"] .btn-outline-secondary,
+[data-geo-theme="geo-aqua"] .btn-outline-default {
+	background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 40%, #c8c8c8 60%, #b8b8b8 100%) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+	color: var(--geo-fg) !important;
+	border: 1px solid #a0a8b4 !important;
+	border-radius: 12px !important;
+	transition: all 0.1s ease !important;
+}
+
+[data-geo-theme="geo-aqua"] .btn-white:hover,
+[data-geo-theme="geo-aqua"] .btn-outline-primary:hover,
+[data-geo-theme="geo-aqua"] .btn-outline-secondary:hover,
+[data-geo-theme="geo-aqua"] .btn-outline-default:hover {
+	background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 40%, #e0e0e0 60%, #d0d0d0 100%) !important;
+	color: var(--geo-primary) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -295,6 +373,8 @@
 	background-color: var(--geo-bg) !important;
 	color: var(--geo-fg) !important;
 	border: 1px solid var(--geo-border) !important;
+	border-radius: 4px !important;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12) !important;
 }
 
 [data-geo-theme="geo-aqua"] input:focus,
@@ -302,7 +382,7 @@
 [data-geo-theme="geo-aqua"] select:focus,
 [data-geo-theme="geo-aqua"] .form-control:focus {
 	border-color: var(--geo-primary) !important;
-	box-shadow: 0 0 0 3px rgba(90, 170, 255, 0.5) !important;
+	box-shadow: 0 0 0 3px rgba(10, 126, 228, 0.4) !important;
 	outline: none;
 }
 
@@ -422,7 +502,7 @@
 	background-color: var(--geo-bg) !important;
 	border: 1px solid var(--geo-border) !important;
 	border-radius: 6px !important;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22) !important;
 }
 
 [data-geo-theme="geo-aqua"] .dropdown-item,
@@ -471,7 +551,9 @@
 }
 
 [data-geo-theme="geo-aqua"] ::-webkit-scrollbar-track {
-	background: #e0e4ea;
+	background: #d8dde6;
+	border-radius: 4px;
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 [data-geo-theme="geo-aqua"] ::-webkit-scrollbar-thumb {
@@ -512,8 +594,9 @@
    -------------------------------------------------------------------------- */
 [data-geo-theme="geo-aqua"] .page-head,
 [data-geo-theme="geo-aqua"] .page-head-content {
-	background-color: var(--geo-bg) !important;
-	border-bottom: 1px solid var(--geo-border-subtle) !important;
+	background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 100%) !important;
+	border-bottom: 1px solid #b8c0cc !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
 [data-geo-theme="geo-aqua"] .widget-control,
@@ -813,9 +896,12 @@
 /* --------------------------------------------------------------------------
    Form layout details
    -------------------------------------------------------------------------- */
-[data-geo-theme="geo-aqua"] .form-section .section-head {
-	background-color: var(--geo-bg-subtle) !important;
+[data-geo-theme="geo-aqua"] .form-section .section-head,
+[data-geo-theme="geo-aqua"] .form-section-title,
+[data-geo-theme="geo-aqua"] .section-head {
+	background: linear-gradient(180deg, #f0f4f8 0%, #e4eaf0 100%) !important;
 	border-bottom: 1px solid var(--geo-border) !important;
+	border-radius: 8px 8px 0 0 !important;
 	color: var(--geo-fg) !important;
 }
 
@@ -833,4 +919,184 @@
 
 [data-geo-theme="geo-aqua"] .mandatory-section {
 	border-left: 3px solid var(--geo-primary) !important;
+}
+/* --------------------------------------------------------------------------
+   Traffic-light close buttons on modals
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .modal-header .close,
+[data-geo-theme="geo-aqua"] .modal-header [data-dismiss],
+[data-geo-theme="geo-aqua"] .btn-modal-close {
+	width: 14px !important;
+	height: 14px !important;
+	background: radial-gradient(circle at 35% 35%, #ff8080, #cc0000 60%, #880000) !important;
+	border-radius: 50% !important;
+	border: 1px solid #880000 !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+	opacity: 1 !important;
+	padding: 0 !important;
+	font-size: 0 !important;
+	text-indent: -9999px !important;
+	overflow: hidden !important;
+}
+
+[data-geo-theme="geo-aqua"] .modal-header .close:hover,
+[data-geo-theme="geo-aqua"] .modal-header [data-dismiss]:hover,
+[data-geo-theme="geo-aqua"] .btn-modal-close:hover {
+	background: radial-gradient(circle at 35% 35%, #ffaaaa, #ff3333 60%, #aa0000) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 4px rgba(200, 0, 0, 0.5) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tabs / Pills — classic OSX brushed-metal tab look
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .nav-tabs .nav-link,
+[data-geo-theme="geo-aqua"] .nav-pills .nav-link {
+	background: linear-gradient(180deg, #f0f0f0 0%, #d8d8d8 100%) !important;
+	border: 1px solid #b0b8c4 !important;
+	border-radius: 6px 6px 0 0 !important;
+	color: var(--geo-fg) !important;
+	transition: all 0.1s ease !important;
+}
+
+[data-geo-theme="geo-aqua"] .nav-tabs .nav-link:hover,
+[data-geo-theme="geo-aqua"] .nav-pills .nav-link:hover {
+	background: linear-gradient(180deg, #f8f8f8 0%, #e8e8e8 100%) !important;
+	color: var(--geo-primary) !important;
+}
+
+[data-geo-theme="geo-aqua"] .nav-tabs .nav-link.active,
+[data-geo-theme="geo-aqua"] .nav-pills .nav-link.active,
+[data-geo-theme="geo-aqua"] .nav-tabs .nav-item.show .nav-link {
+	background: linear-gradient(180deg, #ffffff 0%, #e8f0fe 100%) !important;
+	border-bottom-color: transparent !important;
+	color: var(--geo-primary) !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-geo-theme="geo-aqua"] .nav-tabs {
+	border-bottom: 1px solid var(--geo-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Progress Bars — Aqua gel style
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .progress {
+	background: #d0d8e4 !important;
+	border-radius: 10px !important;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+	height: 16px !important;
+	border: 1px solid #b0bac8 !important;
+}
+
+[data-geo-theme="geo-aqua"] .progress-bar {
+	background: linear-gradient(180deg, #80ccff 0%, #3399ff 40%, #0a7ee4 60%, #0060c8 100%) !important;
+	border-radius: 10px !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Checkboxes and Radio Buttons — Aqua style
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] input[type="checkbox"],
+[data-geo-theme="geo-aqua"] input[type="radio"] {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	width: 14px !important;
+	height: 14px !important;
+	border: 1px solid #8898aa !important;
+	background-color: #ffffff !important;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+	vertical-align: middle !important;
+	cursor: pointer !important;
+}
+
+[data-geo-theme="geo-aqua"] input[type="checkbox"] {
+	border-radius: 3px !important;
+}
+
+[data-geo-theme="geo-aqua"] input[type="radio"] {
+	border-radius: 50% !important;
+}
+
+[data-geo-theme="geo-aqua"] input[type="checkbox"]:checked,
+[data-geo-theme="geo-aqua"] input[type="radio"]:checked {
+	background: linear-gradient(180deg, #5aadff 0%, #0a7ee4 50%, #0060b8 100%) !important;
+	border-color: #0060b8 !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-geo-theme="geo-aqua"] input[type="checkbox"]:checked::after {
+	content: '✓' !important;
+	display: block !important;
+	color: #ffffff !important;
+	font-size: 10px !important;
+	line-height: 12px !important;
+	text-align: center !important;
+	font-weight: bold !important;
+}
+
+[data-geo-theme="geo-aqua"] input[type="radio"]:checked::after {
+	content: '' !important;
+	display: block !important;
+	width: 6px !important;
+	height: 6px !important;
+	background: #ffffff !important;
+	border-radius: 50% !important;
+	margin: 3px auto !important;
+}
+
+[data-geo-theme="geo-aqua"] input[type="checkbox"]:focus,
+[data-geo-theme="geo-aqua"] input[type="radio"]:focus {
+	outline: none !important;
+	box-shadow: 0 0 0 3px rgba(10, 126, 228, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Select Dropdowns — gel arrow indicator
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] select,
+[data-geo-theme="geo-aqua"] .form-control[multiple] {
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238898aa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+	background-repeat: no-repeat !important;
+	background-position: right 10px center !important;
+	padding-right: 28px !important;
+	border-radius: 6px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tooltips — classic OSX yellow tooltip
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .tooltip .tooltip-inner,
+[data-geo-theme="geo-aqua"] [data-toggle="tooltip"] .tooltip-inner {
+	background-color: #fffff0 !important;
+	color: #1a1a1a !important;
+	border: 1px solid #c8b860 !important;
+	border-radius: 4px !important;
+	font-size: 0.78rem !important;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-geo-theme="geo-aqua"] .tooltip .tooltip-arrow::before,
+[data-geo-theme="geo-aqua"] .tooltip .arrow::before {
+	border-color: #c8b860 !important;
+}
+
+[data-geo-theme="geo-aqua"] .popover {
+	background-color: var(--geo-bg) !important;
+	border: 1px solid var(--geo-border) !important;
+	border-radius: 8px !important;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22) !important;
+}
+
+[data-geo-theme="geo-aqua"] .popover-header {
+	background: linear-gradient(180deg, #f0f4f8 0%, #e4eaf0 100%) !important;
+	border-bottom: 1px solid var(--geo-border) !important;
+	border-radius: 8px 8px 0 0 !important;
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .popover-body {
+	color: var(--geo-fg) !important;
 }
