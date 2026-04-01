@@ -44,6 +44,18 @@
 [data-geo-theme="geo-aqua"] .form-control,
 [data-geo-theme="geo-aqua"] .like-disabled-input {
 	font-family: 'Lucida Grande', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* background + color only for non-button elements */
+[data-geo-theme="geo-aqua"],
+[data-geo-theme="geo-aqua"] body,
+[data-geo-theme="geo-aqua"] input,
+[data-geo-theme="geo-aqua"] textarea,
+[data-geo-theme="geo-aqua"] select,
+[data-geo-theme="geo-aqua"] label,
+[data-geo-theme="geo-aqua"] .frappe-control,
+[data-geo-theme="geo-aqua"] .form-control,
+[data-geo-theme="geo-aqua"] .like-disabled-input {
 	background-color: var(--geo-bg);
 	color: var(--geo-fg);
 }
@@ -199,6 +211,35 @@
 [data-geo-theme="geo-aqua"] .sidebar-group-header button:hover {
 	color: var(--geo-primary) !important;
 	background: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar — section label toggle button (e.g. "∨ PUBLIC")
+   Prevent base button rule from giving it a white background
+   -------------------------------------------------------------------------- */
+[data-geo-theme="geo-aqua"] .standard-sidebar-label,
+[data-geo-theme="geo-aqua"] button.standard-sidebar-label,
+[data-geo-theme="geo-aqua"] .btn-reset.standard-sidebar-label,
+[data-geo-theme="geo-aqua"] .desk-sidebar .standard-sidebar-label {
+	background: transparent !important;
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	color: var(--geo-fg-muted) !important;
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	padding: 8px 12px 4px 12px !important;
+	width: 100%;
+	text-align: left;
+}
+
+[data-geo-theme="geo-aqua"] .standard-sidebar-label:hover,
+[data-geo-theme="geo-aqua"] button.standard-sidebar-label:hover {
+	background: transparent !important;
+	background-color: transparent !important;
+	color: var(--geo-primary) !important;
 }
 
 /* --------------------------------------------------------------------------
