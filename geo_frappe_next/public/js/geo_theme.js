@@ -2,12 +2,15 @@
  * Geo Theme Engine — per-user theme switcher for geo_frappe_next
  *
  * Themes:
- *   geo-light   — Geo Light
- *   geo-dark    — Geo Dark
- *   geo-ocean   — Geo Ocean
- *   geo-sunset  — Geo Sunset
- *   geo-forest  — Geo Forest
- *   geo-jam     — Geo Jam (Space Jam '96)
+ *   geo-light     — Geo Light
+ *   geo-dark      — Geo Dark
+ *   geo-ocean     — Geo Ocean
+ *   geo-sunset    — Geo Sunset
+ *   geo-forest    — Geo Forest
+ *   geo-jam       — Geo Jam (Space Jam '96)
+ *   geo-vista     — Geo Vista
+ *   geo-cyberpunk — Geo Cyberpunk
+ *   geo-aqua      — Geo Aqua (macOS Aqua)
  */
 
 (function () {
@@ -25,6 +28,8 @@
 		{ value: "geo-forest", label: "🌲 Geo Forest" },
 		{ value: "geo-jam", label: "🏀 Geo Jam" },
 		{ value: "geo-vista", label: "🪟 Geo Vista" },
+		{ value: "geo-cyberpunk", label: "🌆 Geo Cyberpunk" },
+		{ value: "geo-aqua", label: "🍎 Geo Aqua" },
 	];
 
 	// -----------------------------------------------------------------------
