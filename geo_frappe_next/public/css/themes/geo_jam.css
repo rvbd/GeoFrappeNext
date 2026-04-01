@@ -429,10 +429,7 @@
 /* Style the #freeze backdrop itself (the real Frappe overlay for grid-form) */
 [data-geo-theme="geo-jam"] #freeze.grid-form,
 [data-geo-theme="geo-jam"] #freeze.dark.grid-form {
-	background-color: rgba(0, 0, 30, 0.65) !important;
-	backdrop-filter: blur(4px) !important;
-	-webkit-backdrop-filter: blur(4px) !important;
-	opacity: 1 !important;
+	background-color: rgba(0, 0, 30, 0.45) !important;
 }
 
 /* Hide the freeze message container inside it (no loading text needed) */
@@ -468,18 +465,12 @@
 [data-geo-theme="geo-jam"] .modal-backdrop.fade,
 [data-geo-theme="geo-jam"] .modal-backdrop.show {
 	background-color: rgba(0, 0, 0, 0.45) !important;
-	backdrop-filter: blur(4px) !important;
-	-webkit-backdrop-filter: blur(4px) !important;
-	opacity: 1 !important;
 }
 
 /* The dimmer fallback (legacy Frappe versions) */
 [data-geo-theme="geo-jam"] .rows-dimmer,
 [data-geo-theme="geo-jam"] .grid-body .rows-dimmer {
 	background-color: rgba(0, 0, 0, 0.45) !important;
-	backdrop-filter: blur(4px) !important;
-	-webkit-backdrop-filter: blur(4px) !important;
-	opacity: 1 !important;
 }
 
 /* Elevate the open row's form above the dimmer (legacy fallback) */
