@@ -782,6 +782,28 @@
 	box-shadow: 0 2px 8px rgba(10, 126, 228, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
 }
 
+/* Ensure text inside gel pill buttons is always white */
+[data-geo-theme="geo-aqua"] .document-link-badge *,
+[data-geo-theme="geo-aqua"] .document-link .btn *,
+[data-geo-theme="geo-aqua"] .connections-section .btn *,
+[data-geo-theme="geo-aqua"] .btn-link-to-form *,
+[data-geo-theme="geo-aqua"] .document-link-badge span,
+[data-geo-theme="geo-aqua"] .document-link-badge a,
+[data-geo-theme="geo-aqua"] .document-link .btn span,
+[data-geo-theme="geo-aqua"] .document-link .btn a,
+[data-geo-theme="geo-aqua"] .document-link .btn-link-to-form span,
+[data-geo-theme="geo-aqua"] .connections-section .btn span,
+[data-geo-theme="geo-aqua"] .connections-section .btn a {
+	color: #ffffff !important;
+}
+
+[data-geo-theme="geo-aqua"] .document-link-badge:hover *,
+[data-geo-theme="geo-aqua"] .document-link .btn:hover *,
+[data-geo-theme="geo-aqua"] .connections-section .btn:hover *,
+[data-geo-theme="geo-aqua"] .btn-link-to-form:hover * {
+	color: #ffffff !important;
+}
+
 [data-geo-theme="geo-aqua"] .document-link .btn-new,
 [data-geo-theme="geo-aqua"] .connections-section .btn-new,
 [data-geo-theme="geo-aqua"] .document-link .add-new-row {
