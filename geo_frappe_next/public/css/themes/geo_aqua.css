@@ -1163,3 +1163,86 @@
 [data-geo-theme="geo-aqua"] .popover-body {
 	color: var(--geo-fg) !important;
 }
+
+/* ========================== */
+/* Comments Section - Aqua UI */
+/* ========================== */
+[data-geo-theme="geo-aqua"] .timeline,
+[data-geo-theme="geo-aqua"] .comment-box,
+[data-geo-theme="geo-aqua"] .comment-input-wrapper {
+	background: #f7fafd;
+	border: 1px solid #d5e7fa;
+	border-radius: 16px;
+	box-shadow: 0 1px 6px rgba(209, 231, 250, 0.4) inset;
+	margin-bottom: 1.5rem;
+	padding: 1rem !important;
+}
+
+[data-geo-theme="geo-aqua"] .comment-input[data-fieldtype],
+[data-geo-theme="geo-aqua"] .comment-input input,
+[data-geo-theme="geo-aqua"] .comment-input textarea {
+	background: #fff;
+	border: 1.5px solid #8bb7f5;
+	border-radius: 999px;
+	padding: 0.5em 1.2em;
+	font-size: 1.02em;
+	transition: box-shadow 0.2s, border 0.2s;
+}
+
+[data-geo-theme="geo-aqua"] .comment-input:focus-within,
+[data-geo-theme="geo-aqua"] .comment-input input:focus,
+[data-geo-theme="geo-aqua"] .comment-input textarea:focus {
+	border-color: #0a7ee4;
+	box-shadow: 0 0 0 2px #7bccff;
+	outline: none;
+}
+
+[data-geo-theme="geo-aqua"] .avatar-frame,
+[data-geo-theme="geo-aqua"] .avatar.avatar-small {
+	background: linear-gradient(180deg, #e4f1fb 0%, #c1d6ee 100%);
+	border: 2px solid #b2cbe7;
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(181, 219, 255, 0.27);
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #3c6abf;
+	margin-right: .9em;
+}
+
+[data-geo-theme="geo-aqua"] .comment-box {
+	margin-bottom: .7em;
+	background: #fafdff;
+}
+
+[data-geo-theme="geo-aqua"] .comment-box .btn {
+	background: linear-gradient(180deg, #a8d8ff 0%, #5aadff 60%, #2e90e8 100%) !important;
+	border: 1px solid #1a78cc !important;
+	border-radius: 12px !important;
+	color: #fff !important;
+	font-weight: 600;
+	transition: background 0.18s, box-shadow 0.18s;
+}
+
+[data-geo-theme="geo-aqua"] .comment-box .btn:hover {
+	background: linear-gradient(180deg, #c0e4ff 0%, #76bfff 50%, #1a8ff5 100%) !important;
+	box-shadow: 0 2px 8px rgba(165, 212, 255, 0.33);
+}
+
+[data-geo-theme="geo-aqua"] .comments-title,
+[data-geo-theme="geo-aqua"] .timeline-head {
+	font-weight: 700;
+	color: #0a7ee4;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.47);
+	margin-bottom: 4px;
+	font-family: 'Lucida Grande', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[data-geo-theme="geo-aqua"] .timeline-new-comment {
+	border-top: 1px solid #dde3ea;
+	margin: 1rem 0 0.7rem 0;
+}
