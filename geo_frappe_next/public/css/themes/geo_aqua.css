@@ -948,7 +948,7 @@
 	font-size: 1em !important;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) !important;
 	border-bottom: 1px solid #c4ddf5 !important;
-	padding: 8px 18px 8px 18px !important;
+	padding: 8px 18px !important;
 }
 
 /* Action buttons inside comment box / form-timeline — Aqua lozenge style */
@@ -1225,7 +1225,7 @@
 	height: 36px !important;
 	min-height: 36px !important;
 	flex-shrink: 0 !important;
-	overflow: visible !important;
+	overflow: hidden !important;
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
