@@ -892,18 +892,43 @@
 /* --------------------------------------------------------------------------
    Comments & Activity section
    -------------------------------------------------------------------------- */
-[data-geo-theme="geo-aqua"] .comment-box,
-[data-geo-theme="geo-aqua"] .comment-input-wrapper,
-[data-geo-theme="geo-aqua"] .frappe-comment,
-[data-geo-theme="geo-aqua"] .timeline-content,
-[data-geo-theme="geo-aqua"] .timeline-item,
-[data-geo-theme="geo-aqua"] .activity-timeline,
 [data-geo-theme="geo-aqua"] .form-timeline,
-[data-geo-theme="geo-aqua"] .timeline,
+[data-geo-theme="geo-aqua"] .activity-timeline,
 [data-geo-theme="geo-aqua"] .new-timeline {
-	background-color: #ffffff !important;
-	border: 1px solid var(--geo-border) !important;
+	background: linear-gradient(180deg, #ffffff 0%, #ecf6fd 100%) !important;
+	border: 1px solid #c4ddf5 !important;
+	border-radius: 12px !important;
+	box-shadow: 0 2px 8px rgba(180, 215, 250, 0.35), inset 0 1px 3px rgba(209, 231, 250, 0.5) !important;
 	color: var(--geo-fg) !important;
+	padding: 0.75rem !important;
+}
+
+[data-geo-theme="geo-aqua"] .timeline-content,
+[data-geo-theme="geo-aqua"] .timeline-item {
+	background: transparent !important;
+	border: none !important;
+	color: var(--geo-fg) !important;
+}
+
+[data-geo-theme="geo-aqua"] .frappe-comment {
+	background: rgba(255, 255, 255, 0.85) !important;
+	border: 1px solid #d0e6fa !important;
+	border-radius: 10px !important;
+	box-shadow: 0 1px 4px rgba(180, 215, 250, 0.3) !important;
+	color: var(--geo-fg) !important;
+	padding: 0.6rem 0.8rem !important;
+	margin-bottom: 0.5rem !important;
+}
+
+[data-geo-theme="geo-aqua"] .comment-box,
+[data-geo-theme="geo-aqua"] .comment-input-wrapper {
+	background: linear-gradient(180deg, #ffffff 0%, #ecf6fd 100%) !important;
+	border: 1px solid #c4ddf5 !important;
+	border-radius: 12px !important;
+	box-shadow: 0 2px 8px rgba(180, 215, 250, 0.35), inset 0 1px 3px rgba(209, 231, 250, 0.5) !important;
+	color: var(--geo-fg) !important;
+	padding: 0.75rem !important;
+	margin-bottom: 0.75rem !important;
 }
 
 [data-geo-theme="geo-aqua"] .comment-input,
@@ -911,26 +936,44 @@
 [data-geo-theme="geo-aqua"] .comment-input-wrapper textarea {
 	background-color: #ffffff !important;
 	color: var(--geo-fg) !important;
-	border: 1px solid var(--geo-border) !important;
+	border: 1.5px solid #8bb7f5 !important;
+	border-radius: 8px !important;
 }
 
 [data-geo-theme="geo-aqua"] .activity-title,
 [data-geo-theme="geo-aqua"] .activity-header {
-	background-color: var(--geo-bg-subtle) !important;
-	color: var(--geo-fg) !important;
-	border-bottom: 1px solid var(--geo-border) !important;
+	background-color: transparent !important;
+	color: #0a7ee4 !important;
+	font-weight: 700 !important;
+	font-size: 1em !important;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+	border-bottom: 1px solid #c4ddf5 !important;
+	padding: 8px 18px !important;
 }
 
-/* Action buttons inside comment box — silver gel style */
+/* Action buttons inside comment box / form-timeline — Aqua lozenge style */
 [data-geo-theme="geo-aqua"] .comment-box .btn[data-action="new_email"],
 [data-geo-theme="geo-aqua"] .comment-box .btn[data-action="new_event"],
 [data-geo-theme="geo-aqua"] .form-timeline .btn-new-email,
-[data-geo-theme="geo-aqua"] .form-timeline .btn-new-event {
-	background: linear-gradient(180deg, #f8f8f8 0%, #d8d8d8 50%, #c0c0c0 100%) !important;
-	color: var(--geo-fg) !important;
-	border: 1px solid #a0a8b4 !important;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
-	border-radius: 4px !important;
+[data-geo-theme="geo-aqua"] .form-timeline .btn-new-event,
+[data-geo-theme="geo-aqua"] .timeline-head .btn[data-action="new_email"],
+[data-geo-theme="geo-aqua"] .timeline-head .btn[data-action="new_event"] {
+	background: linear-gradient(180deg, #a8d8ff 0%, #5aadff 60%, #2e90e8 100%) !important;
+	color: #ffffff !important;
+	border: 1px solid #1a78cc !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 2px 5px rgba(10, 126, 228, 0.3) !important;
+	border-radius: 12px !important;
+	font-weight: 600 !important;
+}
+
+[data-geo-theme="geo-aqua"] .comment-box .btn[data-action="new_email"]:hover,
+[data-geo-theme="geo-aqua"] .comment-box .btn[data-action="new_event"]:hover,
+[data-geo-theme="geo-aqua"] .form-timeline .btn-new-email:hover,
+[data-geo-theme="geo-aqua"] .form-timeline .btn-new-event:hover,
+[data-geo-theme="geo-aqua"] .timeline-head .btn[data-action="new_email"]:hover,
+[data-geo-theme="geo-aqua"] .timeline-head .btn[data-action="new_event"]:hover {
+	background: linear-gradient(180deg, #c0e4ff 0%, #76bfff 50%, #1a8ff5 100%) !important;
+	box-shadow: 0 0 0 3px rgba(90, 173, 255, 0.35), 0 2px 6px rgba(10, 126, 228, 0.4) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -1167,82 +1210,91 @@
 /* ========================== */
 /* Comments Section - Aqua UI */
 /* ========================== */
-[data-geo-theme="geo-aqua"] .timeline,
-[data-geo-theme="geo-aqua"] .comment-box,
-[data-geo-theme="geo-aqua"] .comment-input-wrapper {
-	background: #f7fafd;
-	border: 1px solid #d5e7fa;
-	border-radius: 16px;
-	box-shadow: 0 1px 6px rgba(209, 231, 250, 0.4) inset;
-	margin-bottom: 1.5rem;
-	padding: 1rem !important;
+
+/* Avatar — ensure fully circular, not cropped */
+[data-geo-theme="geo-aqua"] .avatar-frame,
+[data-geo-theme="geo-aqua"] .avatar.avatar-small,
+[data-geo-theme="geo-aqua"] .timeline .avatar,
+[data-geo-theme="geo-aqua"] .comment-box .avatar {
+	background: linear-gradient(180deg, #e4f1fb 0%, #c1d6ee 100%) !important;
+	border: 2px solid #b2cbe7 !important;
+	border-radius: 50% !important;
+	box-shadow: 0 2px 6px rgba(100, 170, 230, 0.35) !important;
+	width: 36px !important;
+	min-width: 36px !important;
+	height: 36px !important;
+	min-height: 36px !important;
+	flex-shrink: 0 !important;
+	overflow: hidden !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	font-weight: bold !important;
+	font-size: 0.95em !important;
+	color: #3c6abf !important;
+	margin-right: 0.75em !important;
 }
 
+[data-geo-theme="geo-aqua"] .avatar-frame img,
+[data-geo-theme="geo-aqua"] .avatar img {
+	border-radius: 50% !important;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover !important;
+	display: block !important;
+}
+
+/* Input field — pill/lozenge style with Aqua focus glow */
 [data-geo-theme="geo-aqua"] .comment-input[data-fieldtype],
 [data-geo-theme="geo-aqua"] .comment-input input,
 [data-geo-theme="geo-aqua"] .comment-input textarea {
-	background: #fff;
-	border: 1.5px solid #8bb7f5;
-	border-radius: 999px;
-	padding: 0.5em 1.2em;
-	font-size: 1.02em;
-	transition: box-shadow 0.2s, border 0.2s;
+	background: #ffffff !important;
+	border: 1.5px solid #8bb7f5 !important;
+	border-radius: 8px !important;
+	padding: 0.5em 1.1em !important;
+	font-size: 1em !important;
+	width: 100% !important;
+	transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 [data-geo-theme="geo-aqua"] .comment-input:focus-within,
 [data-geo-theme="geo-aqua"] .comment-input input:focus,
 [data-geo-theme="geo-aqua"] .comment-input textarea:focus {
-	border-color: #0a7ee4;
-	box-shadow: 0 0 0 2px #7bccff;
-	outline: none;
+	border-color: #0a7ee4 !important;
+	box-shadow: 0 0 0 3px rgba(123, 204, 255, 0.5) !important;
+	outline: none !important;
 }
 
-[data-geo-theme="geo-aqua"] .avatar-frame,
-[data-geo-theme="geo-aqua"] .avatar.avatar-small {
-	background: linear-gradient(180deg, #e4f1fb 0%, #c1d6ee 100%);
-	border: 2px solid #b2cbe7;
-	border-radius: 50%;
-	box-shadow: 0 2px 8px rgba(181, 219, 255, 0.27);
-	width: 36px;
-	height: 36px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: bold;
-	font-size: 1.1em;
-	color: #3c6abf;
-	margin-right: .9em;
+/* Comment/Activity section titles */
+[data-geo-theme="geo-aqua"] .comments-title,
+[data-geo-theme="geo-aqua"] .timeline-head,
+[data-geo-theme="geo-aqua"] .section-head {
+	font-weight: 700 !important;
+	color: #0a7ee4 !important;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+	padding: 8px 18px 8px 14px !important;
+	font-family: 'Lucida Grande', -apple-system, BlinkMacSystemFont, sans-serif !important;
+	letter-spacing: 0.01em !important;
 }
 
-[data-geo-theme="geo-aqua"] .comment-box {
-	margin-bottom: .7em;
-	background: #fafdff;
-}
-
-[data-geo-theme="geo-aqua"] .comment-box .btn {
+/* Button inside comment box — Aqua lozenge (post/submit buttons) */
+[data-geo-theme="geo-aqua"] .comment-box .btn:not([data-action="new_email"]):not([data-action="new_event"]) {
 	background: linear-gradient(180deg, #a8d8ff 0%, #5aadff 60%, #2e90e8 100%) !important;
 	border: 1px solid #1a78cc !important;
 	border-radius: 12px !important;
-	color: #fff !important;
-	font-weight: 600;
+	color: #ffffff !important;
+	font-weight: 600 !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 4px rgba(10, 126, 228, 0.25) !important;
 	transition: background 0.18s, box-shadow 0.18s;
 }
 
-[data-geo-theme="geo-aqua"] .comment-box .btn:hover {
+[data-geo-theme="geo-aqua"] .comment-box .btn:not([data-action="new_email"]):not([data-action="new_event"]):hover {
 	background: linear-gradient(180deg, #c0e4ff 0%, #76bfff 50%, #1a8ff5 100%) !important;
-	box-shadow: 0 2px 8px rgba(165, 212, 255, 0.33);
+	box-shadow: 0 0 0 3px rgba(90, 173, 255, 0.35), 0 2px 6px rgba(10, 126, 228, 0.35) !important;
 }
 
-[data-geo-theme="geo-aqua"] .comments-title,
-[data-geo-theme="geo-aqua"] .timeline-head {
-	font-weight: 700;
-	color: #0a7ee4;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.47);
-	margin-bottom: 4px;
-	font-family: 'Lucida Grande', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
+/* New comment divider */
 [data-geo-theme="geo-aqua"] .timeline-new-comment {
-	border-top: 1px solid #dde3ea;
-	margin: 1rem 0 0.7rem 0;
+	border-top: 1px solid #c8dff5 !important;
+	margin: 0.85rem 0 0.6rem 0 !important;
 }
